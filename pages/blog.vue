@@ -10,7 +10,7 @@
         <div class="blogs">
             <v-container>
                 <v-row>
-                    <v-col cols="auto" lg="4" v-for="blog in blogs" :key="blog">
+                    <v-col cols="auto" lg="4" sm="6" v-for="blog in blogs" :key="blog">
                         <NuxtLink :to="blog.to">
                             <v-card>
                                 <v-img :src="blog.src" height="300" cover></v-img>
