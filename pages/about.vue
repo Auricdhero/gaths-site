@@ -8,49 +8,67 @@
             </div>
         </v-parallax>
         <div class="about">
-            <v-row>
-                <v-col>
-                    <v-container class="mt-10 mb-10 mx-10">
-                        <h4 class="text-justify">{{ missionTitle }}</h4>
-                        <p class="text-justify">{{ missionContent }}</p>
-                        <p class="text-muted text-italize">{{ quote }}</p>
-                        <v-row>
-                            <v-col cols="auto" lg="2">
-                                <v-avartar>
-                                    <v-img :src="profile" height="55"></v-img>
-                                </v-avartar>
-                            </v-col>
-                            <v-col cols="auto" lg="5">
-                                <h6 class="text-left">{{ profileName }}</h6>
-                                <p class="text-left">{{ position }}</p>
-                            </v-col>
-                        </v-row>
-                    </v-container>
-                </v-col>
-                <v-col>
-                    <v-img class="mt-10 mb-10" height="350" :src="aboutImg"></v-img>
-                </v-col>
-            </v-row>
+            <v-container>
+                <v-row>
+                    <v-col cols="auto" lg="5" md="6" sm="12">
+                        <v-container class="mt-10 mb-10 ">
+                            <h4 class="text-justify">{{ missionTitle }}</h4>
+                            <p class="text-justify">{{ missionContent }}</p>
+                            <p class="text-muted text-italize">{{ quote }}</p>
+                            <v-row>
+                                <v-col cols="auto" lg="2" sm="6">
+                                    <v-avartar>
+                                        <v-img :src="profile" height="55"></v-img>
+                                    </v-avartar>
+                                </v-col>
+                                <v-col cols="auto" lg="5" sm="6">
+                                    <h6 class="text-left">{{ profileName }}</h6>
+                                    <p class="text-left">{{ position }}</p>
+                                </v-col>
+                            </v-row>
+                        </v-container>
+                    </v-col>
+                    <v-col cols="auto" lg="6" md="6" sm="12">
+                        <v-img class="mt-10 mb-10" height="350" :src="aboutImg"></v-img>
+                    </v-col>
+                </v-row>
+            </v-container>
         </div>
         <div class="mission-statement">
-            <v-row>
-                <v-col>
-                    <v-img :src="aboutImg" class="mt-10 mb-10" height="350"></v-img>
-                </v-col>
-                <v-col>
-                    <v-container class="mt-10 pt-10">
-                        <h4 class="text-left">{{ missionTitle }}</h4>
-                        <p class="text-left">{{ missionContent }}</p>
-                    </v-container>
-                </v-col>
-            </v-row>
+            <v-container>
+                <v-row>
+                    <v-col cols="auto" lg="">
+                        <v-img :src="aboutImg" class="mt-10 mb-10" height="350"></v-img>
+                    </v-col>
+                    <v-col cols="auto" lg="">
+                        <v-container class="mt-10 pt-10">
+                            <h4 class="text-left">{{ missionTitle }}</h4>
+                            <p class="text-left">{{ missionContent }}</p>
+                        </v-container>
+                    </v-col>
+                </v-row>
+            </v-container>
         </div>
         <div class="values">
-            <v-container class="mt-10">
-                <h3 class="text-center">Core Values</h3><br>
-                <v-row>
-                    <v-col>
-                        
+            <h3 class=" mt-10 text-center">Core Values</h3><br>
+            <v-container class="mt-10 d-flex">
+                <br>
+                <v-row dense>
+                    <v-col v-for="value in values" :key="value" cols="auto">
+                        <v-container>
+                            <v-card style="width: 20em;">
+                                <v-container fluid>
+                                    <v-icon class="d-flex justtify-center mt-5 mx-auto" style="font-size: 60px;">{{
+                                        value.icon
+                                    }}</v-icon>
+                                    <v-card-item>
+                                        <h4 class="text-center">{{ value.title }}</h4><br>
+                                        <p class="text-justify">{{ value.description }}</p>
+
+                                    </v-card-item>
+                                </v-container>
+                            </v-card>
+                        </v-container>
                     </v-col>
                 </v-row>
             </v-container>
@@ -68,7 +86,11 @@ const quote = '“Its a privilege to work alongside passionate individuals who s
 const profileName = 'Bismark Osei';
 const position = 'Executive Member';
 
-
+const values = ref([
+    { icon: 'mdi-school', title: 'Excellence', description: 'The quick brown fox jumped over the lazy dog.' },
+    { icon: 'mdi-account-hard-hat', title: 'Hard Work', description: 'The quick brown fox jumped over the lazy dog.' },
+    { icon: 'mdi-campfire', title: 'Hospitable', description: 'The quick brown fox jumped over the lazy dog.' }
+]);
 
 
 

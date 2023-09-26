@@ -3,17 +3,17 @@
         <v-parallax :src="imgbg" height="700">
             <div class="homeImg">
                 <div class="mx-auto ">
-                    <v-container class="justify-content-center">
-                        <h1 class="mx-auto mt-16 pt-10 text-uppercase w-50 text-white text-center">
+                    <v-container class="justify-content-center" style="width: 65%;">
+                        <h1 class="mx-auto mt-16 pt-10 text-uppercase text-white text-center">
                             <!-- {{ home.attributes.pageTitle }} -->
                             INSPIRING GHANA'S FUTURE TOURISM LEADERS TODAY
                         </h1><br>
-                        <p class="w-50 mx-auto text-sentence text-white">
+                        <p class="mx-auto d-flex text-sentence text-white">
                             It is a long established fact that a reader will be distracted by the readable
                             content of a page when looking at its layout. The point of us.
                         </p>
-                        <v-row class="ml-16 pl-16 pt-5">
-                            <v-col class="ml-16 pl-16" cols="auto" lg="3" md="6" sm="6">
+                        <v-row class="d-flex">
+                            <v-col class="mx-auto" cols="auto" lg="3" md="6" sm="6">
                                 <v-btn variant="flat" color="red-accent-2">Learn More
                                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                             </v-col>
@@ -29,7 +29,7 @@
         <br>
         <v-container>
             <v-row>
-                <v-col>
+                <v-col cols="auto" lg="6" sm="6">
                     <v-container class="mt-15">
                         <h3 class="text-sentence">We are right at your Institution.</h3><br>
                         <p class="justify-content-start">It is a long established fact that a reader will be distracted by
@@ -50,7 +50,7 @@
                         </v-row>
                     </v-container>
                 </v-col>
-                <v-col>
+                <v-col cols="auto" lg="6" sm="6">
                     <v-container>
                         <h3 class="text-sentence">We collaborate with 10+ universities and partner institutions.</h3>
                         <v-row>
@@ -106,8 +106,8 @@
             <v-container>
                 <h6 class="text-left mt-16" style="color: #103778;">2023-2025</h6><br>
                 <h3 class="text-left text-uppercase" style="color: #103778;">your elected representatives</h3><br>
-                <v-row class="mb-10">
-                    <v-col cols="auto" lg="2" sm="5" v-for="rep in reps" :key="rep">
+                <v-row class="mb-10 d-flex">
+                    <v-col cols="auto" lg="2" md="5" sm="1" v-for="rep in reps" :key="rep">
                         <v-container style="width: 12em;">
                             <v-card color="#103778" height="150" width="150">
                                 <v-img height="200" cover :src="rep.src"></v-img>
@@ -117,9 +117,10 @@
                         </v-container>
                         <br>
                     </v-col>
-                    <v-btn class="mx-auto" variant="flat" color="red-accent-2">See all reps
-                        <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
+
                 </v-row>
+                <v-btn class="mx-auto d-flex" variant="flat" color="red-accent-2">See all reps
+                    <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                 <br>
             </v-container><br>
         </div>
