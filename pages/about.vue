@@ -89,7 +89,7 @@ const position = 'Executive Member';
 const values = ref([
     { icon: 'mdi-school', title: 'Excellence', description: 'The quick brown fox jumped over the lazy dog.' },
     { icon: 'mdi-account-hard-hat', title: 'Hard Work', description: 'The quick brown fox jumped over the lazy dog.' },
-    { icon: 'mdi-campfire', title: 'Hospitable', description: 'The quick brown fox jumped over the lazy dog.' }
+    { icon: 'mdi-campfire', title: 'Hospitality', description: 'The quick brown fox jumped over the lazy dog.' }
 ]);
 
 
