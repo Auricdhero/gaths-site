@@ -28,7 +28,7 @@
                             </v-row>
                         </v-container>
                     </v-col>
-                    <v-col cols="auto" lg="6" md="6" sm="12">
+                    <v-col cols="auto" lg="3" md="6" sm="12">
                         <v-img class="mt-10 mb-10" height="350" :src="aboutImg"></v-img>
                     </v-col>
                 </v-row>
@@ -51,12 +51,12 @@
         </div>
         <div class="values">
             <h3 class=" mt-10 text-center">Core Values</h3><br>
-            <v-container class="mt-10 d-flex">
+            <v-container class="mt-10 d-flex justify-space-evenly">
                 <br>
                 <v-row dense>
-                    <v-col v-for="value in values" :key="value" cols="auto">
+                    <v-col v-for="value in values" :key="value" cols="auto" sm="">
                         <v-container>
-                            <v-card style="width: 20em;">
+                            <v-card class="ma-2 pa-2" style="width: 20em;">
                                 <v-container fluid>
                                     <v-icon class="d-flex justtify-center mt-5 mx-auto" style="font-size: 60px;">{{
                                         value.icon
