@@ -28,7 +28,7 @@
                             </v-row>
                         </v-container>
                     </v-col>
-                    <v-col cols="auto" lg="3" md="6" sm="12">
+                    <v-col cols="auto" lg="6" md="6" sm="12">
                         <v-img class="mt-10 mb-10" height="350" :src="aboutImg"></v-img>
                     </v-col>
                 </v-row>
