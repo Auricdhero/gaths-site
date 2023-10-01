@@ -22,8 +22,8 @@ export default defineNuxtConfig({
     { src: '~/plugins/bootstrap.js', mode: 'client' }
   ],
   modules: ['@nuxtjs/strapi'],
-  strapi: {
-    url: 'http://localhost:1337'
-  },
+  // strapi: {
+  //   url: 'http://localhost:1337'
+  // },
   devtools: { enabled: true }
 })

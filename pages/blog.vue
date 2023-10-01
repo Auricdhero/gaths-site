@@ -31,6 +31,8 @@
 <script setup>
 import blog from '/img/blog-bg.jpg';
 
+// const { data: posts } = await useFetch('ht96tp://localhost:1337/api/blog');
+
 const blogs = ref([
     { title: 'The President funds GATHS $50000.00', to: '', src: '/img/another.png', description: 'The quick brown fox jumps over the lazy dog' },
     { title: 'GATHS partners with Kimpiskey for Human Resources', to: '', src: '/img/another.png', description: 'The quick brown fox jumps over the lazy dog' },

@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-container>
-            <v-form style="width: 50rem;" class="mt-10 mb-10 mx-auto">
+            <v-form class="mt-10 mb-10 w-50 mx-auto">
                 <h2 class="text-center mb-10">Get In Touch</h2>
                 <v-label>Full Name</v-label><br>
                 <v-text-field variant="outlined" placeholder="Nathan Fletcher"></v-text-field><br>
@@ -14,3 +14,6 @@
         </v-container>
     </div>
 </template>
+<script setup>
+
+</script>
