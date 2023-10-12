@@ -34,6 +34,7 @@
                 </v-row>
             </v-container>
         </div>
+        <v-divider></v-divider>
         <div class="values">
             <h3 class=" mt-10 text-center">Core Values</h3><br>
             <v-container class="mt-10 d-flex justify-space-evenly">
