@@ -3,7 +3,7 @@
         <v-parallax :src="imgbg" height="700">
             <div class="homeImg">
                 <div class="mx-auto ">
-                    <v-container class="justify-content-center" style="width: 65%;">
+                    <v-container class="justify-content-center" style="width: 50%;">
                         <h1 class="mx-auto mt-16 pt-10 text-uppercase text-white text-center">
                             <!-- {{ home.attributes.pageTitle }} -->
                             INSPIRING GHANA'S FUTURE TOURISM LEADERS TODAY
@@ -12,7 +12,7 @@
                             It is a long established fact that a reader will be distracted by the readable
                             content of a page when looking at its layout. The point of us.
                         </p>
-                        <v-row class="d-flex">
+                        <v-row>
                             <v-col class="mx-auto" cols="auto" lg="3" md="6" sm="6">
                                 <v-btn variant="flat" color="red-accent-2">Learn More
                                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
