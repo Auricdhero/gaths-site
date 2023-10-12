@@ -34,21 +34,6 @@
                 </v-row>
             </v-container>
         </div>
-        <div class="mission-statement">
-            <v-container>
-                <v-row>
-                    <v-col cols="auto" lg="">
-                        <v-img :src="aboutImg" class="mt-10 mb-10" height="350"></v-img>
-                    </v-col>
-                    <v-col cols="auto" lg="">
-                        <v-container class="mt-10 pt-10">
-                            <h4 class="text-left">{{ missionTitle }}</h4>
-                            <p class="text-left">{{ missionContent }}</p>
-                        </v-container>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </div>
         <div class="values">
             <h3 class=" mt-10 text-center">Core Values</h3><br>
             <v-container class="mt-10 d-flex justify-space-evenly">
@@ -73,6 +58,22 @@
                 </v-row>
             </v-container>
         </div>
+        <div class="mission-statement">
+            <v-container>
+                <v-row>
+                    <v-col cols="auto" lg="">
+                        <v-img :src="aboutImg" class="mt-10 mb-10" height="350"></v-img>
+                    </v-col>
+                    <v-col cols="auto" lg="">
+                        <v-container class="mt-10 pt-10">
+                            <h4 class="text-left">{{ missionTitle }}</h4>
+                            <p class="text-left">{{ missionContent }}</p>
+                        </v-container>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </div>
+
     </div>
 </template>
 <script setup>
