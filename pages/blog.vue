@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-parallax :src="blog" height="320">
+        <v-parallax :src="blogPic" height="320">
             <div class="blog-title">
                 <v-container>
                     <h2 class="text-uppercase text-white text-center pt-16 mt-16 mb-16 pb-16">our stories</h2>
@@ -9,19 +9,25 @@
         </v-parallax>
         <div class="blogs">
             <v-container>
+                <!-- <h1>{{ blogs }}</h1> -->
                 <v-row>
-                    <v-col cols="auto" lg="4" sm="6" v-for="blog in blogs" :key="blog">
-                        <NuxtLink :to="blog.to">
-                            <v-card>
-                                <v-img :src="blog.src" height="300" cover></v-img>
-                                <v-card-item>
-                                    <h4 class="text-center">{{ blog.title }}</h4>
-                                    <v-divider></v-divider>
-                                    <p class="text-justify">{{ blog.description }}</p>
-                                </v-card-item>
-                                <v-btn class="mx-4 mb-10" variant="outlined">Read More <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
-                            </v-card>
-                        </NuxtLink>
+                    <v-col cols="auto" lg="4" sm="6" v-for="blog in blogs.data" :key="blog.id">
+                        <!-- <NuxtLink :to="'/blogs/${blog.[id]}'"> -->
+                        <v-card>
+                            <v-img :src="'http://localhost:1337' + blog.attributes.Image.data.attributes.url" height="300"
+                                cover></v-img>
+                            <v-card-item>
+                                <!-- {{ blog }} -->
+                                <!-- <h1>{{ data.blogs.id }}</h1> -->
+                                <!-- <h1>{{ blog.id }}</h1> -->
+                                <h4 class="text-center">{{ blog.attributes.Title }}</h4>
+                                <v-divider></v-divider>
+                                <p class="text-justify">{{ blog.attributes.Description }}</p>
+                            </v-card-item>
+                            <v-btn :to="'/blogs/${blog.[id]}'" class="mx-4 mb-10" variant="outlined">Read More
+                                <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
+                        </v-card>
+                        <!-- </NuxtLink> -->
                     </v-col>
                 </v-row>
             </v-container>
@@ -29,15 +35,19 @@
     </div>
 </template>
 <script setup>
-import blog from '/img/blog-bg.jpg';
+// import useStrapiData from '~/composables/strapi';
 
-
-const blogs = ref([
-    { title: 'The President funds GATHS $50000.00', to: '', src: '/img/another.png', description: 'The quick brown fox jumps over the lazy dog' },
-    { title: 'GATHS partners with Kimpiskey for Human Resources', to: '', src: '/img/another.png', description: 'The quick brown fox jumps over the lazy dog' },
-    { title: 'GATHS add Research and Developments team.', to: '', src: '/img/another.png', description: 'The quick brown fox jumps over the lazy dog' },
-]);
-
+const config = useRuntimeConfig();
+import blogPic from '/img/blog-bg.jpg';
+// const props = defineProps({
+//     blog: Object
+// })
+const { data: blogs } = await useFetch('http://localhost:1337/api/blogs?populate=*');
+const blog = await useFetch('http://localhost:1337/api/blogs/${blogId}')
+// const blogImg = computed(() => {
+//     return ''
+// });
+console.log(blogs)
 
 </script>
 <style>

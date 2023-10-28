@@ -1,9 +1,11 @@
 <template>
     <div>
-        <v-parallax :src="about" height="320">
+        <v-parallax :src="aboutImgBg" height="320">
             <div class="aboutImg">
                 <v-container>
-                    <h2 class="text-uppercase text-white text-center pt-16 mt-16 mb-16 pb-16">about gaths</h2>
+                    <h2 class="text-uppercase text-white text-center pt-16 mt-16 mb-16 pb-16">
+                        {{ about.data.attributes.AboutCover }}
+                    </h2>
                 </v-container>
             </div>
         </v-parallax>
@@ -12,13 +14,15 @@
                 <v-row>
                     <v-col cols="auto" lg="5" md="6" sm="12">
                         <v-container class="mt-10 mb-10 ">
-                            <h4 class="text-justify">{{ missionTitle }}</h4>
-                            <p class="text-justify">{{ missionContent }}</p>
-                            <p class="text-muted text-italize">{{ quote }}</p>
+                            <h4 class="text-justify">{{ about.data.attributes.missionTitle }}</h4>
+                            <p class="text-justify">{{ about.data.attributes.missionDetail }}</p>
+                            <p class="text-muted text-italize">{{ about.data.attributes.missionQuote }}</p>
                             <v-row>
                                 <v-col cols="auto" lg="2" sm="6">
                                     <v-avartar>
-                                        <v-img :src="profile" height="55"></v-img>
+                                        <v-img
+                                            :src="'http://127.0.0.1:1337' + about.data.attributes.visionPic.data.attributes.url"
+                                            height="55"></v-img>
                                     </v-avartar>
                                 </v-col>
                                 <v-col cols="auto" lg="5" sm="6">
@@ -63,12 +67,13 @@
             <v-container>
                 <v-row>
                     <v-col cols="auto" lg="">
-                        <v-img :src="aboutImg" class="mt-10 mb-10" height="350"></v-img>
+                        <v-img :src="'http://127.0.0.1:1337' + about.data.attributes.visionPic.data.attributes.url"
+                            class="mt-10 mb-10" height="350"></v-img>
                     </v-col>
                     <v-col cols="auto" lg="">
                         <v-container class="mt-10 pt-10">
-                            <h4 class="text-left">{{ missionTitle }}</h4>
-                            <p class="text-left">{{ missionContent }}</p>
+                            <h4 class="text-left">{{ about.data.attributes.visionTitle }}</h4>
+                            <p class="text-left">{{ about.data.attributes.visionDescription }}</p>
                         </v-container>
                     </v-col>
                 </v-row>
@@ -78,13 +83,22 @@
     </div>
 </template>
 <script setup>
-import about from '/img/about.png'
+import aboutImgBg from '/img/about.png'
 import aboutImg from '/img/customerService.webp';
 import profile from '/img/bismark.png';
 
-const missionTitle = 'Our Mission: Advancing Tourism Education and Industry Excellence';
-const missionContent = 'At GATHS, we are on a mission to advance education and foster industry excellence in tourism and hospitality. Through innovative educational opportunities, a culture of continuous learning, and collaboration among industry stakeholders, we empower students and professionals to excel in their careers. Our focus on knowledge, skill development, and practical application prepares individuals to become future leaders and changemakers who drive innovation and create positive impacts within the dynamic world of tourism and hospitality.""';
-const quote = '“Its a privilege to work alongside passionate individuals who share the same vision and determination.I am proud of our achievements and excited for the journey ahead as we continue to make a lasting impact on the tourism and hospitality landscape.”';
+const config = useRuntimeConfig();
+const aboutContent = await useFetch('http:///127.0.0.1:1337/api/about-page?populate=*');
+const about = aboutContent.data.value;
+// console.log(config.public.apiBase);
+// const visionImg = computed(() => {
+//     // if (!about.value.data) {
+//     //     return null
+//     // }
+//     return 'http:///127.0.0.1:1337/api/about-page?populate=*about.data.attributes.missionPic.data.attributes.url'
+// })
+console.log(about);
+
 const profileName = 'Bismark Osei';
 const position = 'Executive Member';
 
@@ -104,5 +118,4 @@ const values = ref([
 
 .mission-statement {
     background: rgba(0, 0, 0, .1);
-}
-</style>
+}</style>

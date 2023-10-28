@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Title>GATHS</Title>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

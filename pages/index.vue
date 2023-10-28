@@ -6,11 +6,11 @@
                     <v-container class="justify-content-center" style="width: 50%;">
                         <h1 class="mx-auto mt-16 pt-10 text-uppercase text-white text-center">
                             <!-- {{ home.attributes.pageTitle }} -->
-                            INSPIRING GHANA'S FUTURE TOURISM LEADERS TODAY
+                            <!-- {{home.data.attributes.coverPa}} -->
+                            {{ home.data.attributes.coverPa }}
                         </h1><br>
-                        <p class="mx-auto d-flex text-sentence text-white">
-                            It is a long established fact that a reader will be distracted by the readable
-                            content of a page when looking at its layout. The point of us.
+                        <p class="mx-auto d-flex text-sentence text-center text-white">
+                            {{ home.data.attributes.coverDescription }}
                         </p>
                         <v-row>
                             <v-col class="mx-auto" cols="auto" lg="3" md="6" sm="6">
@@ -31,12 +31,8 @@
             <v-row>
                 <v-col cols="auto" lg="6" sm="6">
                     <v-container class="mt-15">
-                        <h3 class="text-sentence">We are right at your Institution.</h3><br>
-                        <p class="justify-content-start">It is a long established fact that a reader will be distracted by
-                            the
-                            readable content of a page when looking at its layout. It is a long established fact that a
-                            reader
-                            will bet. It is a long established fact that a reader will be.
+                        <h3 class="text-sentence">{{home.data.attributes.InstitutionDescriptionTitle}}</h3><br>
+                        <p class="justify-content-start">{{ home.data.attributes.InstitutionDescription }}
                         </p>
                         <v-row>
                             <v-col cols="auto" lg="4" sm="6">
@@ -70,8 +66,8 @@
                     </v-col>
                     <v-col cols="" sm="">
                         <v-container class="pt-16 mt-16">
-                            <h4>{{ liveTitle }}</h4><br>
-                            <p>{{ liveContent }} <nuxt-link to="">{{ link }}</nuxt-link></p><br>
+                            <h4>{{ home.data.attributes.skillgapTitle }}</h4><br>
+                            <p>{{ home.data.attributes.skillGapDescription }} <nuxt-link to="">{{ link }}</nuxt-link></p><br>
                             <v-btn color="#103778" variant="outlined">View Report
                                 <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                         </v-container>
@@ -133,12 +129,10 @@
                     <v-col cols="auto" lg="6" sm="8">
                         <v-container class="mt-10">
                             <h4 class="text-left">
-                                Build Your Future in Tourism and Hospitality. Take your Next Steps.
+                                {{ home.data.attributes.tourismFutureTitle }}
                             </h4><br>
                             <p class="text-justify">
-                                Join the Ghana Association of Tourism and Hospitality Students today and unlock exclusive
-                                opportunities to learn from industry experts, network with professionals, and make a
-                                positive impact on the tourism industry.
+                                {{ home.data.attributes.tourismFutureDescription }}
                             </p><br>
                             <v-btn color="#103778" variant="outlined">View Report
                                 <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
@@ -153,6 +147,11 @@
 import imgbg from '../assets/img/img-bg.jpg'
 import live from '/img/img-live.png'
 import another from '/img/another.png'
+
+const homeContent = await useFetch('http://127.0.0.1:1337/api/home-page?populate=*');
+const home = homeContent.data.value;
+console.log(homeContent)
+
 const images = ref([
     { src: '/img/att.png' },
     { src: '/img/blue.png' },
