@@ -21,7 +21,7 @@
                                 <v-col cols="auto" lg="2" sm="6">
                                     <v-avartar>
                                         <v-img
-                                            :src="'http://127.0.0.1:1337' + about.data.attributes.visionPic.data.attributes.url"
+                                            :src="'https://admin.gathstudents.com' + about.data.attributes.visionPic.data.attributes.url"
                                             height="55"></v-img>
                                     </v-avartar>
                                 </v-col>
@@ -67,7 +67,7 @@
             <v-container>
                 <v-row>
                     <v-col cols="auto" lg="">
-                        <v-img :src="'http://127.0.0.1:1337' + about.data.attributes.visionPic.data.attributes.url"
+                        <v-img :src="'https://admin.gathstudents.com' + about.data.attributes.visionPic.data.attributes.url"
                             class="mt-10 mb-10" height="350"></v-img>
                     </v-col>
                     <v-col cols="auto" lg="">
@@ -88,7 +88,7 @@ import aboutImg from '/img/customerService.webp';
 import profile from '/img/bismark.png';
 
 const config = useRuntimeConfig();
-const aboutContent = await useFetch('http:///127.0.0.1:1337/api/about-page?populate=*');
+const aboutContent = await useFetch('https://admin.gathstudents.com/api/about-page?populate=*');
 const about = aboutContent.data.value;
 // console.log(config.public.apiBase);
 // const visionImg = computed(() => {

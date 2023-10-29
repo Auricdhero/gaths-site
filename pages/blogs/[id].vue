@@ -14,6 +14,6 @@
 <script setup>
 import blogPic from '/img/blog-bg.jpg';
 const route = useRoute();
-const { data: blogs } = await useFetch('http://localhost:1337/api/blogs?populate=*');
-const { data: blog } = await useFetch('http://localhost:1337/api/blogs/${route.params.id}');
+const { data: blogs } = await useFetch('https://admin.gathstudents.com/api/blogs?populate=*');
+const { data: blog } = await useFetch('https://admin.gathstudents.com/api/blogs/${route.params.id}');
 </script>

@@ -14,7 +14,7 @@
                     <v-col cols="auto" lg="4" sm="6" v-for="blog in blogs.data" :key="blog.id">
                         <!-- <NuxtLink :to="'/blogs/${blog.[id]}'"> -->
                         <v-card>
-                            <v-img :src="'http://localhost:1337' + blog.attributes.Image.data.attributes.url" height="300"
+                            <v-img :src="'https://admin.gathstudents.com' + blog.attributes.Image.data.attributes.url" height="300"
                                 cover></v-img>
                             <v-card-item>
                                 <!-- {{ blog }} -->
@@ -42,8 +42,8 @@ import blogPic from '/img/blog-bg.jpg';
 // const props = defineProps({
 //     blog: Object
 // })
-const { data: blogs } = await useFetch('http://localhost:1337/api/blogs?populate=*');
-const blog = await useFetch('http://localhost:1337/api/blogs/${blogId}')
+const { data: blogs } = await useFetch('https://admin.gathstudents.com/api/blogs?populate=*');
+const blog = await useFetch('https://admin.gathstudents.com/api/blogs/${blogId}')
 // const blogImg = computed(() => {
 //     return ''
 // });
