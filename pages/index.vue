@@ -31,7 +31,7 @@
             <v-row>
                 <v-col cols="auto" lg="6" sm="6">
                     <v-container class="mt-15">
-                        <h3 class="text-sentence">{{home.data.attributes.InstitutionDescriptionTitle}}</h3><br>
+                        <h3 class="text-sentence">{{ home.data.attributes.InstitutionDescriptionTitle }}</h3><br>
                         <p class="justify-content-start">{{ home.data.attributes.InstitutionDescription }}
                         </p>
                         <v-row>
@@ -62,12 +62,14 @@
             <v-container>
                 <v-row>
                     <v-col cols="" sm="">
-                        <v-img height="34em" :src="live"></v-img>
+                        <v-img height="34em"
+                            :src="'https://admin.gathstudents.com' + home.data.attributes.skillgapPic.data.attributes.url"></v-img>
                     </v-col>
                     <v-col cols="" sm="">
                         <v-container class="pt-16 mt-16">
                             <h4>{{ home.data.attributes.skillgapTitle }}</h4><br>
-                            <p>{{ home.data.attributes.skillGapDescription }} <nuxt-link to="">{{ link }}</nuxt-link></p><br>
+                            <p>{{ home.data.attributes.skillGapDescription }} <nuxt-link to="">{{ link }}</nuxt-link></p>
+                            <br>
                             <v-btn color="#103778" variant="outlined">View Report
                                 <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                         </v-container>
@@ -124,7 +126,8 @@
             <v-container>
                 <v-row class="mt-16 mb-16">
                     <v-col cols="auto" lg="6" sm="4">
-                        <v-img height="350" :src="another"></v-img>
+                        <v-img height="350"
+                            :src="'https://admin.gathstudents.com' + home.data.attributes.tourismFutureDes.data.attributes.url"></v-img>
                     </v-col>
                     <v-col cols="auto" lg="6" sm="8">
                         <v-container class="mt-10">
@@ -145,10 +148,8 @@
 </template>
 <script setup>
 import imgbg from '../assets/img/img-bg.jpg'
-import live from '/img/img-live.png'
-import another from '/img/another.png'
 
-const homeContent = await useFetch('http://127.0.0.1:1337/api/home-page?populate=*');
+const homeContent = await useFetch('https://admin.gathstudents.com/api/home-page?populate=*');
 const home = homeContent.data.value;
 console.log(homeContent)
 
@@ -165,8 +166,8 @@ const images = ref([
     { src: '/img/temtu.png' },
 ]);
 
-const liveTitle = 'Tourism and Hospitality Skills Gap Report';
-const liveContent = 'It is a long established fact that 89%  readers will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. ';
+// const liveTitle = 'Tourism and Hospitality Skills Gap Report';
+// const liveContent = 'It is a long established fact that 89%  readers will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. ';
 const link = 'Tourism Impact Report (2022).';
 
 const exeMem = 'From the University Tourism Community';
@@ -208,5 +209,4 @@ const reps = ref([
 
 body {
     background: #F2F1F1;
-}
-</style>
+}</style>

@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // import  graphql from '@rollup/plugin-graphql'
 import { defineNuxtConfig } from 'nuxt/config'
-const strapiBaseUri = process.env.API_URL || "http://localhost:1337/"
+// const strapiBaseUri = process.env.API_URL || "http://localhost:1337/"
 // import graphql from "@rollup/plugin-graphql";
 export default defineNuxtConfig({
   vite: {
