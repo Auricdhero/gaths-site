@@ -87,7 +87,7 @@ import aboutImgBg from '/img/about.png'
 import aboutImg from '/img/customerService.webp';
 import profile from '/img/bismark.png';
 
-const config = useRuntimeConfig();
+// const config = useRuntimeConfig();
 const aboutContent = await useFetch('https://admin.gathstudents.com/api/about-page?populate=*');
 const about = aboutContent.data.value;
 // console.log(config.public.apiBase);
