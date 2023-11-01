@@ -85,16 +85,11 @@
                     <v-slide-group-item v-for="testimony in testimonies.data" :key="testimony.id">
                         <!-- {{ testimony }} -->
                         <v-card width="400" color="#F8F7F7" elevation="0">
-                            <v-img v-if="'https://admin.gathstudents.com' + testimony.attributes.ProfilePic.data == true" class="mt-4"
-                                src="/img/profile.png"
-                                height="200"></v-img>
 
-                            <v-img v-else class="mt-4"
-                                :src="'https://admin.gathstudents.com' + testimony.attributes.ProfilePic.url"
-                                height="200"></v-img><br>
+                            <v-img class="mt-4" src="/img/profile.png" height="200"></v-img><br>
 
                             <h5 class="text-center">{{ testimony.attributes.Name }}</h5><br>
-                            <h6 class="text-center">{{ testimony.attributes.institution }}</h6><br>
+                            <h6 class="text-center">{{ testimony.attributes.Institution }}</h6><br>
                             <div>
                                 <v-divider inset width="255" color="#E3371E"></v-divider><br>
                             </div>
@@ -113,8 +108,12 @@
                     <v-col cols="auto" lg="2" md="5" sm="1" v-for="rep in reps.data" :key="rep.id">
                         <v-container style="width: 12em;">
                             <v-card color="#103778" height="150" width="150">
-                                <v-img v-if="'https://admin.gathstudents.com' + rep.attributes.ExecutivePic.data.attributes.url == true" height="200" cover src="/img/profile.png"></v-img>
-                                <v-img v-else height="200" round :src="'https://admin.gathstudents.com' +  rep.attributes.ExecutivePic.data.attributes.url" cover style="border-radius: 50%;"></v-img>
+                                <v-img
+                                    v-if="'https://admin.gathstudents.com' + rep.attributes.ExecutivePic.data.attributes.url == true"
+                                    height="200" cover src="/img/profile.png"></v-img>
+                                <v-img v-else height="200" round
+                                    :src="'https://admin.gathstudents.com' + rep.attributes.ExecutivePic.data.attributes.url"
+                                    cover style="border-radius: 50%;"></v-img>
                             </v-card><br>
                             <h5 class="text-center">{{ rep.attributes.Name }}</h5><br>
                             <h6 class="text-center">{{ rep.attributes.Position }}</h6>
@@ -180,7 +179,7 @@ const exeMem = 'From the University Tourism Community';
 const memDes = '5+ thousand tourism students have already joined the  university tourism community.';
 
 
-const {data:reps} = await useFetch('https://admin.gathstudents.com/api/executives?populate=*')
+const { data: reps } = await useFetch('https://admin.gathstudents.com/api/executives?populate=*')
 const { data: testimonies } = await useFetch('https://admin.gathstudents.com/api/testimonies?populate=*');
 
 
