@@ -14,8 +14,8 @@
                     <v-col cols="auto" lg="4" sm="6" v-for="blog in blogs.data" :key="blog.id">
                         <!-- <NuxtLink :to="'/blogs/${blog.[id]}'"> -->
                         <v-card>
-                            <v-img :src="'https://admin.gathstudents.com' + blog.attributes.Image.data.attributes.url" height="300"
-                                cover></v-img>
+                            <v-img :src="'https://admin.gathstudents.com' + blog.attributes.Image.data.attributes.url"
+                                height="300" cover></v-img>
                             <v-card-item>
                                 <!-- {{ blog }} -->
                                 <!-- <h1>{{ data.blogs.id }}</h1> -->
@@ -24,7 +24,7 @@
                                 <v-divider></v-divider>
                                 <p class="text-justify">{{ blog.attributes.Description }}</p>
                             </v-card-item>
-                            <v-btn to="" class="mx-4 mb-10" variant="outlined">Read More
+                            <v-btn :to="'blogs/[id]' + blog.id" class="mx-4 mb-10" variant="outlined">Read More
                                 <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                         </v-card>
                         <!-- </NuxtLink> -->
@@ -39,14 +39,11 @@
 
 const config = useRuntimeConfig();
 import blogPic from '/img/blog-bg.jpg';
-// const props = defineProps({
-//     blog: Object
-// })
+const route = useRoute();
+
 const { data: blogs } = await useFetch('https://admin.gathstudents.com/api/blogs?populate=*');
-const blog = await useFetch('https://admin.gathstudents.com/api/blogs/${blogId}')
-// const blogImg = computed(() => {
-//     return ''
-// });
+const blog = await useFetch('https://admin.gathstudents.com/api/blogs/?populate=*')
+
 console.log(blogs)
 
 </script>

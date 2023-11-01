@@ -107,7 +107,7 @@
         </div>
         <div>
             <v-container>
-                <h6 class="text-left mt-16" style="color: #103778;">2023-2025</h6><br>
+                <h6 class="text-left mt-16" style="color: #103778;">2023-2024</h6><br>
                 <h3 class="text-left text-uppercase" style="color: #103778;">your elected representatives</h3><br>
                 <v-row class="mb-10 d-flex">
                     <v-col cols="auto" lg="2" md="5" sm="1" v-for="rep in reps.data" :key="rep.id">
@@ -179,33 +179,10 @@ const link = 'Tourism Impact Report (2022).';
 const exeMem = 'From the University Tourism Community';
 const memDes = '5+ thousand tourism students have already joined the  university tourism community.';
 
-// const testimonies = ref([
-//     { name: 'Bismark Osei', src: '/img/bismark.png', des: '“It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here.”', institution: 'KNUST' },
-//     { name: 'Hawa O', src: '/img/hawa.png', des: '““It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.””', institution: 'UCC' },
-//     { name: 'Isaac F.', src: '/img/isaac.png', des: '“It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.”', institution: 'UEW' },
-//     { name: 'Bismark Osei', src: '/img/bismark.png', des: '“It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here.”', institution: 'KNUST' }
-// ]);
 
-// const reps = ref([
-//     { name: 'Isaac Frempong', src: '/img/isaac.png', role: 'President' },
-//     { name: 'Bismark Osei', src: '/img/bismark.png', role: 'Vice President' },
-//     { name: 'Hawa Osman', src: '/img/bismark.png', role: 'W. Commissioner' },
-//     { name: 'Abena Kompany', src: '/img/bismark.png', role: 'Dep. W. Commissioner' },
-//     { name: 'Ace Money', src: '/img/bismark.png', role: 'Treasurer' },
-//     { name: 'Kilimani Abass', src: '/img/bismark.png', role: 'Organizer' },
-//     { name: 'Christine Oss', src: '/img/bismark.png', role: 'Gen. Secretary' },
-//     { name: 'Bella Maud', src: '/img/bismark.png', role: 'PR. Officer' },
-//     { name: 'Esther Akos', src: '/img/bismark.png', role: 'Comm. Eng. Lead' },
-//     { name: 'Kofi Kingston', src: '/img/bismark.png', role: 'IT & media Lead' },
-//     { name: 'Maame Esi', src: '/img/bismark.png', role: 'Programs director' },
-//     { name: 'Ken Attah', src: '/img/bismark.png', role: 'Research Assistant' },
-// ]);
 const {data:reps} = await useFetch('https://admin.gathstudents.com/api/executives?populate=*')
-const { data: testimonies } = await useFetch('https://admin.gathstudents.com/api/testimonies?populate=*')
+const { data: testimonies } = await useFetch('https://admin.gathstudents.com/api/testimonies?populate=*');
 
-// const { $strapi } = useContext();
-
-// const { data: home } = await useFetch('http://localhost:1337/api/home');
 
 
 </script>
