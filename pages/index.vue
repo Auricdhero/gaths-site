@@ -114,7 +114,7 @@
                         <v-container style="width: 12em;">
                             <v-card color="#103778" height="150" width="150">
                                 <v-img v-if="'https://admin.gathstudents.com' + rep.attributes.ExecutivePic.data.attributes.url == true" height="200" cover src="/img/profile.png"></v-img>
-                                <v-img v-else height="200" cover :src="'https://admin.gathstudents.com' +  rep.attributes.ExecutivePic.data.attributes.url"></v-img>
+                                <v-img v-else height="200" round :src="'https://admin.gathstudents.com' +  rep.attributes.ExecutivePic.data.attributes.url" cover style="border-radius: 50%;"></v-img>
                             </v-card><br>
                             <h5 class="text-center">{{ rep.attributes.Name }}</h5><br>
                             <h6 class="text-center">{{ rep.attributes.Position }}</h6>
