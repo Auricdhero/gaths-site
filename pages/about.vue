@@ -17,19 +17,7 @@
                             <h4 class="text-justify">{{ about.data.attributes.missionTitle }}</h4>
                             <p class="text-justify">{{ about.data.attributes.missionDetail }}</p>
                             <p class="text-muted text-italize">{{ about.data.attributes.missionQuote }}</p>
-                            <v-row>
-                                <v-col cols="auto" lg="2" sm="6">
-                                    <v-avartar>
-                                        <v-img
-                                            :src="'https://admin.gathstudents.com' + about.data.attributes.visionPic.data.attributes.url"
-                                            height="55"></v-img>
-                                    </v-avartar>
-                                </v-col>
-                                <v-col cols="auto" lg="5" sm="6">
-                                    <h6 class="text-left">{{ profileName }}</h6>
-                                    <p class="text-left">{{ position }}</p>
-                                </v-col>
-                            </v-row>
+                            
                         </v-container>
                     </v-col>
                     <v-col cols="auto" lg="6" md="6" sm="12">
@@ -85,7 +73,7 @@
 <script setup>
 import aboutImgBg from '/img/about.png'
 import aboutImg from '/img/customerService.webp';
-import profile from '/img/bismark.png';
+// import profile from '/img/bismark.png';
 
 // const config = useRuntimeConfig();
 const aboutContent = await useFetch('https://admin.gathstudents.com/api/about-page?populate=*');

@@ -14,11 +14,11 @@
                         </p>
                         <v-row>
                             <v-col class="mx-auto" cols="auto" lg="3" md="6" sm="6">
-                                <v-btn variant="flat" color="red-accent-2">Learn More
+                                <v-btn variant="flat" to="/about" color="red-accent-2">Learn More
                                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                             </v-col>
                             <v-col class="mx-auto" cols="auto" lg="5" md="12" sm="6">
-                                <v-btn variant="outlined" color="white">Become a Member
+                                <v-btn variant="outlined" to="" color="white">Become a Member
                                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                             </v-col>
                         </v-row>
@@ -36,11 +36,11 @@
                         </p>
                         <v-row>
                             <v-col cols="auto" lg="4" sm="6">
-                                <v-btn color="red-accent-2">Learn More
+                                <v-btn to="/about" color="red-accent-2">Learn More
                                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                             </v-col>
                             <v-col cols="auto" lg="5" sm="6">
-                                <v-btn variant="outlined" color="indigo-darken-2" flat>Find a Chapter
+                                <v-btn variant="outlined" to="/chapter" color="indigo-darken-2" flat>Find a Chapter
                                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                             </v-col>
                         </v-row>
@@ -50,8 +50,9 @@
                     <v-container>
                         <h3 class="text-sentence">We collaborate with 10+ universities and partner institutions.</h3>
                         <v-row>
-                            <v-col v-for="image in images" :key="image" cols="4">
-                                <v-img height="4em" aspect-ratio="1" :src="image.src"></v-img>
+                            <v-col v-for="logo in uniLogos.data" :key="logo.id" cols="4">
+                                <v-img height="4em" aspect-ratio="1"
+                                    :src="'https://admin.gathstudents.com' + logo.attributes.img.data.attributes.url"></v-img>
                             </v-col>
                         </v-row>
                     </v-container>
@@ -70,7 +71,7 @@
                             <h4>{{ home.data.attributes.skillgapTitle }}</h4><br>
                             <p>{{ home.data.attributes.skillGapDescription }} <nuxt-link to="">{{ link }}</nuxt-link></p>
                             <br>
-                            <v-btn color="#103778" variant="outlined">View Report
+                            <v-btn to="/skillGap" color="#103778" variant="outlined">View Report
                                 <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                         </v-container>
                     </v-col>
@@ -142,7 +143,7 @@
                             <p class="text-justify">
                                 {{ home.data.attributes.tourismFutureDescription }}
                             </p><br>
-                            <v-btn color="#103778" variant="outlined">View Report
+                            <v-btn to="/hospitality" color="#103778" variant="outlined">View Report
                                 <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                         </v-container>
                     </v-col>
@@ -157,19 +158,19 @@ import imgbg from '../assets/img/img-bg.jpg'
 const homeContent = await useFetch('https://admin.gathstudents.com/api/home-page?populate=*');
 const home = homeContent.data.value;
 console.log(homeContent)
-
-const images = ref([
-    { src: '/img/att.png' },
-    { src: '/img/blue.png' },
-    { src: '/img/htu.png' },
-    { src: '/img/ktu.png' },
-    { src: '/img/att.png' },
-    { src: '/img/nimdea.png' },
-    { src: '/img/tech.png' },
-    { src: '/img/UCC.png' },
-    { src: '/img/ue.png' },
-    { src: '/img/temtu.png' },
-]);
+const { data: uniLogos } = await useFetch('https://admin.gathstudents.com/api/uni-logos?populate=*')
+// const images = ref([
+//     { src: '/img/att.png' },
+//     { src: '/img/blue.png' },
+//     { src: '/img/htu.png' },
+//     { src: '/img/ktu.png' },
+//     { src: '/img/att.png' },
+//     { src: '/img/nimdea.png' },
+//     { src: '/img/tech.png' },
+//     { src: '/img/UCC.png' },
+//     { src: '/img/ue.png' },
+//     { src: '/img/temtu.png' },
+// ]);
 
 // const liveTitle = 'Tourism and Hospitality Skills Gap Report';
 // const liveContent = 'It is a long established fact that 89%  readers will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. ';
