@@ -16,7 +16,7 @@
                         <v-col cols="4" v-for="localChapter in localChapters.data" :key="localChapter.id">
                             <v-card>
                                 <v-img class="align-end" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)" height="200px" cover=""
-                                    :src="'http://localhost:1337' + localChapter.attributes.ChapterImgProfile.data.attributes.url">
+                                    :src="'https://admin.gathstudents.com' + localChapter.attributes.ChapterImgProfile.data.attributes.url">
                                     <v-container>
                                         <h3 class="text-white">{{ localChapter.attributes.ChaterName }}</h3>
                                         <v-divider class="text-white"></v-divider>
@@ -41,7 +41,7 @@
 <script setup>
 import imgbg from '../assets/img/img-bg.jpg'
 
-const { data: localChapters } = await useFetch('http://localhost:1337/api/local-chapters?populate=*');
+const { data: localChapters } = await useFetch('https://admin.gathstudents.com/api/local-chapters?populate=*');
 console.log(localChapters)
 </script>
 <style>

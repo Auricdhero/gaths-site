@@ -109,10 +109,10 @@
                     <v-col cols="auto" lg="2" md="5" sm="1" v-for="rep in reps.data" :key="rep.id">
                         <v-container style="width: 12em;">
                             <v-card color="#103778" height="150" width="150">
-                                <v-img
+                                <!-- <v-img
                                     v-if="'https://admin.gathstudents.com' + rep.attributes.ExecutivePic.data.attributes.url == true"
-                                    height="200" cover src="/img/profile.png"></v-img>
-                                <v-img v-else height="200" round
+                                    height="200" cover src="/img/profile.png"></v-img> -->
+                                <v-img height="200" round
                                     :src="'https://admin.gathstudents.com' + rep.attributes.ExecutivePic.data.attributes.url"
                                     cover style="border-radius: 50%;"></v-img>
                             </v-card><br>
@@ -123,7 +123,8 @@
                     </v-col>
 
                 </v-row>
-                <v-btn class="mx-auto d-flex" variant="flat" color="red-accent-2">See all reps
+                <v-btn class="mx-auto d-flex" to="/executives" style="width: 15em;" variant="flat" color="red-accent-2">See
+                    all reps
                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                 <br>
             </v-container><br>

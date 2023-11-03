@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <v-parallax :src="'http://localhost:1337'+ skill.data.attributes.coverImg.data.attributes.url" height="300">
+        <v-parallax :src="'https://admin.gathstudents.com'+ skill.data.attributes.coverImg.data.attributes.url" height="300">
             <div class="plxcvr">
                 <div class="pt-16"></div>
                 <h1 class="text-center text-white pt-16">
@@ -17,7 +17,7 @@
 <script setup>
 import imgbg from '../assets/img/img-bg.jpg'
 
-const skillGap = await useFetch('http://localhost:1337/api/skillgap-report?populate=*');
+const skillGap = await useFetch('https://admin.gathstudents.com/api/skillgap-report?populate=*');
 const skill = skillGap.data.value;
 // console.log(localChapters)
 </script>
