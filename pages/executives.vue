@@ -9,23 +9,23 @@
         </v-parallax>
         <v-container>
             <v-row>
-                <v-col v-for="executive in executives.data" :key="executive.id">
+                <v-col>
                     <div class="d-flex">
-                        <v-expansion-panels elevation="0">
-                            <v-expansion-panel :title="executive.attributes.local_chapter.data.attributes.ChaterName">
-                                <v-expansion-panel-text>
+                        <v-expansion-panels v-for="chapter in chapters.data" :key="chapter.id" elevation="0">
+                            <v-expansion-panel :title="chapter.attributes.ChaterName">
+                                <v-expansion-panel-text v-for="executive in executives.data" :key="executive.id">
                                     <!-- <v-container style="width: 11em;"> -->
-                                        <v-card color="#103778" height="150" width="150">
-                                            <!-- <v-img
+                                    <v-card color="#103778" height="150" width="150">
+                                        <!-- <v-img
                                     v-if="'https://admin.gathstudents.com' + rep.attributes.ExecutivePic.data.attributes.url == true"
                                     height="200" cover src="/img/profile.png"></v-img> -->
-                                            <v-img height="200" round
-                                                :src="'https://admin.gathstudents.com' + executive.attributes.Picture.data.attributes.url"
-                                                cover style="border-radius: 50%;"></v-img>
+                                        <v-img height="200" round
+                                            :src="'https://admin.gathstudents.com' + executive.attributes.Picture.data.attributes.url"
+                                            cover style="border-radius: 50%;"></v-img>
 
-                                        </v-card><br>
-                                        <h5 class="text-start">{{ executive.attributes.Name }}</h5><br>
-                                        <h6 class="text-start">{{ executive.attributes.Title }}</h6>
+                                    </v-card><br>
+                                    <h5 class="text-start">{{ executive.attributes.Name }}</h5><br>
+                                    <h6 class="text-start">{{ executive.attributes.Title }}</h6>
 
                                     <!-- </v-container> -->
                                 </v-expansion-panel-text>
@@ -44,7 +44,8 @@
 <script setup>
 import blogPic from '/img/blog-bg.jpg';
 const { data: executives } = await useFetch('https://admin.gathstudents.com/api/chapter-executives?populate=*');
-const { data: chapter } = await useFetch('https://admin.gathstudents.com/api/chapter-executives?populate=*');
+const { data: chapters } = await useFetch('https://admin.gathstudents.com/api/chapter-executives?populate=*');
+// const chapter = chapters.data.value;
 </script>
 <style>
 .blog-title {
