@@ -44,6 +44,7 @@
 <script setup>
 import blogPic from '/img/blog-bg.jpg';
 const { data: executives } = await useFetch('https://admin.gathstudents.com/api/chapter-executives?populate=*');
+const { data: chapter } = await useFetch('https://admin.gathstudents.com/api/chapter-executives?populate=*');
 </script>
 <style>
 .blog-title {
