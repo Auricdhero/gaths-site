@@ -24,7 +24,7 @@
                                 <v-divider></v-divider>
                                 <p class="text-justify">{{ blog.attributes.Description }}</p>
                             </v-card-item>
-                            <v-btn :to="'blogs/[id]' + blog.id" class="mx-4 mb-10" variant="outlined">Read More
+                            <v-btn :to="'/blogs/'+blog.id" class="mx-4 mb-10" variant="outlined">Read More
                                 <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                         </v-card>
                         <!-- </NuxtLink> -->

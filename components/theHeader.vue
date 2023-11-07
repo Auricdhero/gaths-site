@@ -24,7 +24,7 @@
                                 </NuxtLink>
                             </li>
                             <li class="nav-item">
-                                <NuxtLink class="nav-link text-white" to="/blog">
+                                <NuxtLink class="nav-link text-white" to="/blogs/">
                                     Blog
                                 </NuxtLink>
                             </li>
