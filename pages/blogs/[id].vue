@@ -12,9 +12,7 @@
             </div>
         </v-parallax>
         <v-container>
-            <p>
-                {{ blog.data.attributes.Detail }}
-            </p>
+            <Markdown :source="blog.data.attributes.Detail"/>
         </v-container>
         <!-- {{ route.blog.Title }} -->
         <!-- <h4>{{ route }}</h4> -->
@@ -23,7 +21,8 @@
     </div>
 </template>
 <script setup>
-import blogPic from '/img/blog-bg.jpg';
+import Markdown from 'vue3-markdown-it'
+// import blogPic from '/img/blog-bg.jpg';
 const route = useRoute();
 // const blogId = route.params.id
 const blogs = await useFetch('https://admin.gathstudents.com/api/blogs?populate=*');
