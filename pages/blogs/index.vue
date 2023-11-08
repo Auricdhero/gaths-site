@@ -24,7 +24,7 @@
                                 <v-divider></v-divider>
                                 <p class="text-justify">{{ blog.attributes.Description }}</p>
                             </v-card-item>
-                            <v-btn :to="'/blogs/'+blog.id" class="mx-4 mb-10" variant="outlined">Read More
+                            <v-btn :to="'/blogs/' + blog.id" class="mx-4 mb-10" variant="outlined">Read More
                                 <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                         </v-card>
                         <!-- </NuxtLink> -->
@@ -42,7 +42,7 @@ import blogPic from '/img/blog-bg.jpg';
 const route = useRoute();
 
 const { data: blogs } = await useFetch('https://admin.gathstudents.com/api/blogs?populate=*');
-const blog = await useFetch('https://admin.gathstudents.com/api/blogs/?populate=*')
+// const { data: blog } = await useFetch('https://admin.gathstudents.com/api/blogs/?populate=*')
 
 console.log(blogs)
 
