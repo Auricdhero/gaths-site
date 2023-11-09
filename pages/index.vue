@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <v-parallax :src="imgbg" height="700">
+        <v-parallax :src="'https://admin.gathstudents.com' + home.data.attributes.coverImg.data.attributes.url" height="700">
             <div class="homeImg">
                 <div class="mx-auto ">
                     <v-container class="justify-content-center" style="width: 50%;">
@@ -17,7 +17,7 @@
                                 <v-btn variant="flat" to="/about" color="red-accent-2">Learn More
                                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                             </v-col>
-                            <v-col class="mx-auto" cols="auto" lg="5" md="12" sm="6">
+                            <v-col class="mx-auto" cols="auto" lg="5" md="6" sm="6">
                                 <v-btn variant="outlined" to="" color="white">Become a Member
                                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                             </v-col>
@@ -160,21 +160,7 @@ const homeContent = await useFetch('https://admin.gathstudents.com/api/home-page
 const home = homeContent.data.value;
 console.log(homeContent)
 const { data: uniLogos } = await useFetch('https://admin.gathstudents.com/api/uni-logos?populate=*')
-// const images = ref([
-//     { src: '/img/att.png' },
-//     { src: '/img/blue.png' },
-//     { src: '/img/htu.png' },
-//     { src: '/img/ktu.png' },
-//     { src: '/img/att.png' },
-//     { src: '/img/nimdea.png' },
-//     { src: '/img/tech.png' },
-//     { src: '/img/UCC.png' },
-//     { src: '/img/ue.png' },
-//     { src: '/img/temtu.png' },
-// ]);
 
-// const liveTitle = 'Tourism and Hospitality Skills Gap Report';
-// const liveContent = 'It is a long established fact that 89%  readers will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. ';
 const link = 'Tourism Impact Report (2022).';
 
 const exeMem = 'From the University Tourism Community';
