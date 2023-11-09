@@ -90,7 +90,7 @@
                 <v-divider></v-divider>
 
                 <div>
-                    <v-btn v-for="sm in sms" :key="sm" class="mx-4" :icon="sm.icons" variant="text"></v-btn>
+                    <v-btn v-for="sm in sms" :key="sm" class="mx-4" :icon="sm.icons" :href="sms.src" variant="text"></v-btn>
                 </div>
             </v-container>
         </v-footer>
@@ -100,8 +100,8 @@
 import logoIcon from '../assets/img/logo.webp'
 const sms = ref([
     { icons: 'mdi-facebook', src: '' },
-    { icons: 'mdi-twitter', src: '' },
-    { icons: 'mdi-linkedin', src: '' },
+    { icons: 'mdi-twitter', src: 'https://twitter.com/GATHSofficial1?t=-MNnLOAY6ohVcCFWtirSQg&s=09' },
+    { icons: 'mdi-linkedin', src: 'https://www.linkedin.com/company/ghana-association-of-tourism-and-hospitality-students-gaths/?originalSubdomain=gh' },
     { icons: 'mdi-instagram', src: '' }
 ]);
 </script>

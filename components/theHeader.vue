@@ -6,11 +6,11 @@
                 </NuxtLink>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon" is-nav></span>
                 </button>
                 <div class="offcanvas offcanvas-end bg-indigo-lighten-4" id="offcanvasNavbar" tabindex="-1">
                     <div class="offcanvas-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" class="btn-close"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body" id="navbarScroll">
                         <ul class="navbar-nav text-white justify-content-start flex-grow-1 pe-3">
@@ -46,5 +46,6 @@
 }
 </style>
 <script setup>
-import logo from '../assets/img/logo.webp'
+import logo from '../assets/img/logo.webp';
+
 </script>
