@@ -102,7 +102,7 @@ const sms = ref([
     { icons: 'mdi-facebook', src: '' },
     { icons: 'mdi-twitter', src: 'https://twitter.com/GATHSofficial1?t=-MNnLOAY6ohVcCFWtirSQg&s=09' },
     { icons: 'mdi-linkedin', src: 'https://www.linkedin.com/company/ghana-association-of-tourism-and-hospitality-students-gaths/?originalSubdomain=gh' },
-    { icons: 'mdi-instagram', src: '' }
+    { icons: 'mdi-instagram', src: 'https://instagram.com/gaths.official?igshid=OGQ5ZDc2ODk2ZA==' }
 ]);
 </script>
 <style>

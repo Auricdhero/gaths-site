@@ -9,14 +9,15 @@
             </div>
         </v-parallax>
         <v-container>
-           {{ skill.data.attributes.body }}
+            <Markdown :source="skill.data.attributes.body"/>
+           
         </v-container>
 
     </div>
 </template>
 <script setup>
 import imgbg from '../assets/img/img-bg.jpg'
-
+import Markdown from 'vue3-markdown-it'
 const skillGap = await useFetch('https://admin.gathstudents.com/api/skillgap-report?populate=*');
 const skill = skillGap.data.value;
 // console.log(localChapters)

@@ -1,6 +1,7 @@
 <template>
     <div class="home">
-        <v-parallax :src="'https://admin.gathstudents.com' + home.data.attributes.coverImg.data.attributes.url" height="700">
+        <v-parallax :src="'https://admin.gathstudents.com' + home.data.attributes.coverImg.data.attributes.url"
+            height="700">
             <div class="homeImg">
                 <div class="mx-auto ">
                     <v-container class="justify-content-center" style="width: 50%;">
@@ -59,6 +60,37 @@
                 </v-col>
             </v-row>
         </v-container>
+        <v-divider></v-divider>
+        <div style="background-color: rgb(255, 255, 255);">
+            <v-container>
+                <h2>Upcoming Events</h2>
+                <br>
+                <v-row>
+                    <v-col v-for="event in events.data.slice(0, 6)" :key="event.id">
+                        <v-card width="300">
+
+                            <v-img cover
+                                :src="'https://admin.gathstudents.com' + event.attributes.flyer.data.attributes.url"
+                                height="150"></v-img><br>
+                            <v-container>
+
+                                <v-card-title>
+                                    {{ event.attributes.Title }}
+                                </v-card-title><br>
+                                <p class="text-muted">{{ event.attributes.Date }}</p>
+                                <p class="text-muted mt-1"><v-icon>mdi-map-marker</v-icon>{{ event.attributes.Location
+                                }}</p>
+                            </v-container>
+
+                        </v-card><br>
+
+                    </v-col>
+                </v-row>
+                <v-btn class="mx-auto d-flex" to="/events/" style="width: 15em;" variant="flat" color="red-accent-2">More
+                    Events
+                    <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
+            </v-container>
+        </div>
         <div style="background-color: #CEE1EA;">
             <v-container>
                 <v-row>
@@ -170,7 +202,7 @@ const memDes = '5+ thousand tourism students have already joined the  university
 const { data: reps } = await useFetch('https://admin.gathstudents.com/api/executives?populate=*')
 const { data: testimonies } = await useFetch('https://admin.gathstudents.com/api/testimonies?populate=*');
 
-
+const { data: events } = await useFetch('https://admin.gathstudents.com/api/events?populate=*');
 
 </script>
 <style>

@@ -51,6 +51,13 @@
                 </v-row>
             </v-container>
         </div>
+        <v-divider></v-divider>
+        <div>
+            <v-container>
+                <h2 class="text-center text-uppercase">{{ history.data.attributes.Title }}</h2>
+                <p class="text-justify">{{ history.data.attributes.Summary }}</p>
+            </v-container>
+        </div>
         <div class="mission-statement">
             <v-container>
                 <v-row>
@@ -78,13 +85,10 @@ import aboutImg from '/img/customerService.webp';
 // const config = useRuntimeConfig();
 const aboutContent = await useFetch('https://admin.gathstudents.com/api/about-page?populate=*');
 const about = aboutContent.data.value;
-// console.log(config.public.apiBase);
-// const visionImg = computed(() => {
-//     // if (!about.value.data) {
-//     //     return null
-//     // }
-//     return 'http:///127.0.0.1:1337/api/about-page?populate=*about.data.attributes.missionPic.data.attributes.url'
-// })
+
+const histories = await useFetch('https://admin.gathstudents.com/api/history-of-gath?populate=*')
+const history = histories.data.value;
+
 console.log(about);
 
 const profileName = 'Bismark Osei';

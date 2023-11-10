@@ -9,14 +9,14 @@
             </div>
         </v-parallax>
         <v-container>
-            {{ hospitality.data.attributes.body }}
+            <Markdown :source="hospitality.data.attributes.body"/>
         </v-container>
 
     </div>
 </template>
 <script setup>
-import imgbg from '../assets/img/img-bg.jpg'
-
+// import imgbg from '../assets/img/img-bg.jpg'
+import Markdown from 'vue3-markdown-it'
 const hospitalityReport = await useFetch('https://admin.gathstudents.com/api/hospitality-report?populate=*');
 const hospitality = hospitalityReport.data.value;
 // console.log(localChapters)

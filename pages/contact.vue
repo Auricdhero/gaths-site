@@ -11,7 +11,10 @@
                 <v-textarea variant="outlined" placeholder="Message" v-model="message"></v-textarea><br>
                 <v-btn type="submit" width="900" variant="outlined">{{ isLoading ? 'Loading...' : 'Send' }} <v-icon>mdi-arrow-right</v-icon></v-btn>
             </v-form>
+            <v-divider></v-divider>
+            
         </v-container>
+
     </div>
 </template>
 <script setup>
