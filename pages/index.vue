@@ -66,7 +66,7 @@
                 <h2>Upcoming Events</h2>
                 <br>
                 <v-row>
-                    <v-col v-for="event in events.data.slice(0, 6)" :key="event.id">
+                    <v-col v-for="event in events.data.slice(0, 4)" :key="event.id">
                         <v-card width="300">
 
                             <v-img cover
