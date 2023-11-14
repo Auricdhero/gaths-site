@@ -10,7 +10,7 @@
                 </button>
                 <div class="offcanvas offcanvas-end bg-indigo-lighten-4" id="offcanvasNavbar" tabindex="-1">
                     <div class="offcanvas-header">
-                        <button type="button" class="btn-close"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body" id="navbarScroll">
                         <ul class="navbar-nav text-white justify-content-start flex-grow-1 pe-3">
@@ -48,5 +48,5 @@
 <script setup>
 import logo from '../assets/img/logo.webp';
 
-const element = useQuerySelector('.nav-link')
+// const element = useQuerySelector('.nav-link');
 </script>
