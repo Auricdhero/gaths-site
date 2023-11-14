@@ -60,10 +60,11 @@
                 </v-col>
             </v-row>
         </v-container>
-        <v-divider></v-divider>
+
         <div style="background-color: rgb(255, 255, 255);">
             <v-container>
-                <h2>Upcoming Events</h2>
+                <h6 class="text-left mt-16" style="color: #103778;">What's happening?</h6><br>
+                <h2 class="mt-5">Upcoming Events</h2>
                 <br>
                 <v-row>
                     <v-col v-for="event in events.data.slice(0, 3)" :key="event.id">
@@ -89,7 +90,7 @@
                 <v-btn class="mx-auto d-flex" to="/events/" style="width: 15em;" variant="flat" color="red-accent-2">More
                     Events
                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
-            </v-container>
+            </v-container><br>
         </div>
         <div style="background-color: #CEE1EA;">
             <v-container>

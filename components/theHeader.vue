@@ -48,4 +48,5 @@
 <script setup>
 import logo from '../assets/img/logo.webp';
 
+const element = useQuerySelector('.nav-link')
 </script>
