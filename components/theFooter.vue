@@ -12,7 +12,7 @@
                                 <h5 class="text-left" style="color: rgb(254, 9, 9);">Membership</h5>
                                 <ul class="text-left ml-n8">
                                     <li><nuxt-link to=""> Membership Benefits</nuxt-link></li>
-                                    <li><nuxt-link to="">Registration</nuxt-link> </li>
+                                    <!-- <li><nuxt-link to="">Registration</nuxt-link> </li> -->
                                     <li><nuxt-link to="">Partner With Us</nuxt-link> </li>
                                     <li><nuxt-link to="">Become a Member</nuxt-link> </li>
                                 </ul>
@@ -20,10 +20,10 @@
                             <v-col cols="auto" lg="3" sm="12" md="6">
                                 <h5 class="text-left" style="color: rgb(254, 9, 9);">Advocacy</h5>
                                 <ul class="text-left ml-n8">
-                                    <li><nuxt-link to="">Policy Agenda</nuxt-link> </li>
+                                    <li><nuxt-link to="/blogs/">Policy Agenda</nuxt-link> </li>
                                     <li><nuxt-link to="">Get Involved</nuxt-link> </li>
-                                    <li><nuxt-link to="">Legacy Advocacy</nuxt-link> </li>
-                                    <li><nuxt-link to="">Commitment to SDG's</nuxt-link> </li>
+                                    <!-- <li><nuxt-link to="">Legacy Advocacy</nuxt-link> </li> -->
+                                    <li><nuxt-link to="/about">Commitment to SDG's</nuxt-link> </li>
                                 </ul>
                             </v-col>
                             <v-col cols="auto" lg="3" sm="12" md="6">
@@ -38,10 +38,10 @@
                             <v-col cols="auto" lg="3" sm="12" md="6">
                                 <h5 class="text-left" style="color: rgb(254, 9, 9);">Organization</h5>
                                 <ul class="text-left ml-n8">
-                                    <li><nuxt-link to="">Event Calandar</nuxt-link> </li>
-                                    <li><nuxt-link to="">Out Reaches</nuxt-link> </li>
+                                    <li><nuxt-link to="/events/">Event Calandar</nuxt-link> </li>
+                                    <!-- <li><nuxt-link to="">Out Reaches</nuxt-link> </li> -->
                                     <li><nuxt-link to="">Partner With Us</nuxt-link> </li>
-                                    <li><nuxt-link to="">Become a Member</nuxt-link> </li>
+                                    <li><nuxt-link to="/gallery">Gallery</nuxt-link> </li>
                                 </ul>
                             </v-col>
                             <v-col cols="auto" lg="5" sm="12" md="6">
@@ -74,7 +74,7 @@
                         <v-form class="mt-7">
                             <v-text-field variant="outlined"
                                 placeholder="Enter your email address to subscribe"></v-text-field>
-                            <v-btn style="height: 55px;">Subscribe</v-btn>
+                            <v-btn style="height: 55px;">Subscribe To Our News Letters</v-btn>
                         </v-form>
                     </v-col>
                 </v-row>
@@ -82,7 +82,7 @@
                 <v-divider></v-divider>
 
                 <div>
-                    <v-btn v-for="sm in sms" :key="sm" class="mx-4" :icon="sm.icons" :href="sms.src" variant="text"></v-btn>
+                    <nuxt-link v-for="sm in sms" :key="sm" class="mx-4" :icon="sm.icons" :to="sms.src" variant="text"></nuxt-link>
                 </div>
             </v-container>
         </v-footer>

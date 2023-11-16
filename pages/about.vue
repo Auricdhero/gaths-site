@@ -13,11 +13,10 @@
             <v-container>
                 <v-row>
                     <v-col cols="auto" lg="5" md="6" sm="12">
-                        <v-container class="mt-10 mb-10 ">
+                        <v-container class="mt-10 mb-10">
                             <h4 class="text-justify">{{ about.data.attributes.missionTitle }}</h4>
                             <p class="text-justify">{{ about.data.attributes.missionDetail }}</p>
                             <p class="text-muted text-italize">{{ about.data.attributes.missionQuote }}</p>
-                            
                         </v-container>
                     </v-col>
                     <v-col cols="auto" lg="6" md="6" sm="12">
@@ -51,11 +50,14 @@
                 </v-row>
             </v-container>
         </div>
-        <v-divider></v-divider>
+        <!-- <v-divider></v-divider> -->
         <div>
             <v-container>
                 <h2 class="text-center text-uppercase">{{ history.data.attributes.Title }}</h2>
                 <p class="text-justify">{{ history.data.attributes.Summary }}</p>
+                <v-btn class="mx-auto d-flex" to="/history" style="width: 15em;" variant="flat" color="red-accent-2">Read
+                    More
+                    <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
             </v-container>
         </div>
         <div class="mission-statement">
@@ -91,8 +93,8 @@ const history = histories.data.value;
 
 console.log(about);
 
-const profileName = 'Bismark Osei';
-const position = 'Executive Member';
+// const profileName = 'Bismark Osei';
+// const position = 'Executive Member';
 
 const values = ref([
     { icon: 'mdi-school', title: 'Excellence', description: 'The quick brown fox jumped over the lazy dog.' },
@@ -110,4 +112,5 @@ const values = ref([
 
 .mission-statement {
     background: rgba(0, 0, 0, .1);
-}</style>
+}
+</style>

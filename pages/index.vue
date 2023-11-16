@@ -187,7 +187,7 @@
     </div>
 </template>
 <script setup>
-import imgbg from '../assets/img/img-bg.jpg'
+// import imgbg from '../assets/img/img-bg.jpg'
 
 const homeContent = await useFetch('https://admin.gathstudents.com/api/home-page?populate=*');
 const home = homeContent.data.value;
