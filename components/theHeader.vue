@@ -30,6 +30,9 @@
                             </li>
 
                             <li class="nav-item">
+                                <NuxtLink class="nav-link text-white" to="/gallery">Gallery</NuxtLink>
+                            </li>
+                            <li class="nav-item">
                                 <NuxtLink class="nav-link text-white" to="/contact">Contact</NuxtLink>
                             </li>
                         </ul>
