@@ -136,8 +136,9 @@
         </div>
         <div>
             <v-container>
-                <h6 class="text-left mt-16" style="color: #103778;">{{home.data.attributes.executiveyear}}</h6><br>
-                <h3 class="text-left text-uppercase" style="color: #103778;">{{home.data.attributes.executiveSectionTitle}}</h3><br>
+                <h6 class="text-left mt-16" style="color: #103778;">{{ home.data.attributes.executiveyear }}</h6><br>
+                <h3 class="text-left text-uppercase" style="color: #103778;">{{ home.data.attributes.executiveSectionTitle }}
+                </h3><br>
                 <v-row class="mb-10 d-flex">
                     <v-col cols="auto" lg="2" md="5" sm="1" v-for="rep in reps.data" :key="rep.id">
                         <v-container style="width: 12em;">

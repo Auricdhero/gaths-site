@@ -82,7 +82,7 @@
                 <v-divider></v-divider>
 
                 <div>
-                    <nuxt-link :to="sms.src" class="mx-4" variant="text"><v-icon v-for="sm in sms" :key="sm" :icon="sm.icons" ></v-icon></nuxt-link>
+                    <v-btn v-for="sm in sms" :key="sm" :icon="sm.icons" :to="sms.src" class="mx-4" variant="text"><v-icon >{{ sm.icons }}</v-icon></v-btn>
                 </div>
             </v-container>
         </v-footer>
