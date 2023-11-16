@@ -73,7 +73,7 @@
                         </div>
                         <v-form class="mt-7">
                             <v-text-field variant="outlined"
-                                placeholder="Enter your email address to subscribe"></v-text-field>
+                                placeholder="Enter your email address to Subscribe to Our Newsletter"></v-text-field>
                             <v-btn style="height: 55px;">Subscribe To Our News Letters</v-btn>
                         </v-form>
                     </v-col>
@@ -82,7 +82,7 @@
                 <v-divider></v-divider>
 
                 <div>
-                    <nuxt-link v-for="sm in sms" :key="sm" class="mx-4" :icon="sm.icons" :to="sms.src" variant="text"></nuxt-link>
+                    <nuxt-link :to="sms.src" class="mx-4" variant="text"><v-icon v-for="sm in sms" :key="sm" :icon="sm.icons" ></v-icon></nuxt-link>
                 </div>
             </v-container>
         </v-footer>
