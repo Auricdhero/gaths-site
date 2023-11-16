@@ -185,6 +185,14 @@
                 </v-row>
             </v-container>
         </div>
+        <v-container>
+            <h3 class="text-left mt-5">{{ home.data.attributes.PartnerSection }}</h3>
+            <v-row>
+                <v-col v-for="partner in partners.data" :key="partner.id">
+                    <v-img aspect-ratio="1" height="200" :src="'https://admin.gathstudents.com'+ partner.attributes.Logo.data.attributes.url"></v-img>
+                </v-col>
+            </v-row>
+        </v-container>
     </div>
 </template>
 <script setup>
@@ -205,6 +213,8 @@ const { data: reps } = await useFetch('https://admin.gathstudents.com/api/execut
 const { data: testimonies } = await useFetch('https://admin.gathstudents.com/api/testimonies?populate=*');
 
 const { data: events } = await useFetch('https://admin.gathstudents.com/api/events?populate=*');
+const { data: partners } = await useFetch('https://admin.gathstudents.com/api/partners?populate=*');
+console.log(partners)
 
 </script>
 <style>
