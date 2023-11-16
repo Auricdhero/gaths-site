@@ -20,16 +20,16 @@
                             <v-col cols="auto" lg="3" sm="12" md="6">
                                 <h5 class="text-left" style="color: rgb(254, 9, 9);">Advocacy</h5>
                                 <ul class="text-left ml-n8">
-                                    <li><nuxt-link to="/blogs/">Policy Agenda</nuxt-link> </li>
+                                    <li><nuxt-link class="link" to="/blogs/">Policy Agenda</nuxt-link> </li>
                                     <li><nuxt-link to="">Get Involved</nuxt-link> </li>
                                     <!-- <li><nuxt-link to="">Legacy Advocacy</nuxt-link> </li> -->
-                                    <li><nuxt-link to="/about">Commitment to SDG's</nuxt-link> </li>
+                                    <li><nuxt-link class="link" to="/about">Commitment to SDG's</nuxt-link> </li>
                                 </ul>
                             </v-col>
                             <v-col cols="auto" lg="3" sm="12" md="6">
                                 <h5 class="text-left" style="color: rgb(254, 9, 9);">Events</h5>
                                 <ul class="text-left ml-n8">
-                                    <li><nuxt-link to="/events/"></nuxt-link> Event Calandar</li>
+                                    <li><nuxt-link class="link" to="/events/"></nuxt-link> Event Calandar</li>
                                     <li><nuxt-link to="">Out Reaches</nuxt-link> </li>
                                     <li><nuxt-link to="">Partner With Us</nuxt-link> </li>
                                     <li><nuxt-link to="">Become a Member</nuxt-link> </li>
@@ -38,10 +38,10 @@
                             <v-col cols="auto" lg="3" sm="12" md="6">
                                 <h5 class="text-left" style="color: rgb(254, 9, 9);">Organization</h5>
                                 <ul class="text-left ml-n8">
-                                    <li><nuxt-link to="/events/">Event Calandar</nuxt-link> </li>
+                                    <li><nuxt-link class="link" to="/events/">Event Calandar</nuxt-link> </li>
                                     <!-- <li><nuxt-link to="">Out Reaches</nuxt-link> </li> -->
                                     <li><nuxt-link to="">Partner With Us</nuxt-link> </li>
-                                    <li><nuxt-link to="/gallery">Gallery</nuxt-link> </li>
+                                    <li><nuxt-link class="link" to="/gallery">Gallery</nuxt-link> </li>
                                 </ul>
                             </v-col>
                             <v-col cols="auto" lg="5" sm="12" md="6">
@@ -102,7 +102,8 @@ ul {
     list-style-type: none;
     
 }
-ul li{
+.link{
     text-decoration: none;
+    color: white;
 }
 </style>
