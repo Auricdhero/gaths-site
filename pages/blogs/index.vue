@@ -38,7 +38,7 @@
 // import useStrapiData from '~/composables/strapi';
 
 const config = useRuntimeConfig();
-import blogPic from '/img/blog-bg.jpg';
+import blogPic from '/img/another.png';
 const route = useRoute();
 
 const { data: blogs } = await useFetch('https://admin.gathstudents.com/api/blogs?populate=*');

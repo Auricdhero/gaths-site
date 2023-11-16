@@ -37,7 +37,7 @@
     </div>
 </template>
 <script setup>
-import blogPic from '/img/blog-bg.jpg';
+import blogPic from '/img/another.png';
 const { data: executives } = await useFetch('https://admin.gathstudents.com/api/chapter-executives?populate=*');
 // const chapters  = await useFetch('https://admin.gathstudents.com/api/chapter-executives?populate=*');
 // const chapter = chapters.data.value;
