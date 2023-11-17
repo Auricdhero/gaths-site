@@ -9,10 +9,21 @@
                 <v-text-field placeholder="nathanFletcher@gmail.com" v-model="email" variant="outlined"></v-text-field><br>
                 <v-label>Message</v-label><br>
                 <v-textarea variant="outlined" placeholder="Message" v-model="message"></v-textarea><br>
-                <v-btn type="submit" width="900" variant="outlined">{{ isLoading ? 'Loading...' : 'Send' }} <v-icon>mdi-arrow-right</v-icon></v-btn>
+                <v-btn type="submit" width="900" variant="outlined">{{ isLoading ? 'Loading...' : 'Send' }}
+                    <v-icon>mdi-arrow-right</v-icon></v-btn>
             </v-form>
             <v-divider></v-divider>
-            
+            <v-row>
+                <v-col cols="auto" sm="12" md="6" lg="6">
+                    <p><v-icon>mdi-whatsapp</v-icon> +233 20 140 7677</p>
+                </v-col>
+                <v-col cols="auto" sm="12" md="6" lg="6">
+                    <p><v-icon>mdi-phone</v-icon> +233 53 043 3563</p>
+                </v-col>
+                <v-col cols="auto" sm="12" md="6" lg="6">
+                    <p><v-icon>mdi-email</v-icon> gathstudents420@gmail.com</p>
+                </v-col>
+            </v-row>
         </v-container>
 
     </div>
@@ -24,11 +35,11 @@ const email = ref('');
 const message = ref('');
 const isLoading = ref(false)
 
-const sendMessage = async () => { 
+const sendMessage = async () => {
     try {
-        
+
     } catch (error) {
-        
+
     }
 };
 
