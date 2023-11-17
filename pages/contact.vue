@@ -20,7 +20,7 @@
                 <v-col cols="auto" sm="12" md="6" lg="6">
                     <p><v-icon>mdi-phone</v-icon> +233 53 043 3563</p>
                 </v-col>
-                <v-col cols="auto" sm="12" md="6" lg="6">
+                <v-col cols="auto" sm="12" md="6" lg="12">
                     <p><v-icon>mdi-email</v-icon> gathstudents420@gmail.com</p>
                 </v-col>
             </v-row>
