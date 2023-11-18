@@ -2,7 +2,7 @@
     <div>
         <v-container>
             <v-row>
-                <v-col v-for="event in events.data" :key="event.id">
+                <v-col v-for="event in events.data.reverse()" :key="event.id">
                     <v-card width="300">
 
                         <v-img cover :src="'https://admin.gathstudents.com' + event.attributes.flyer.data.attributes.url"

@@ -11,7 +11,7 @@
             <v-container>
                 <!-- <h1>{{ blogs }}</h1> -->
                 <v-row>
-                    <v-col cols="auto" lg="4" sm="6" v-for="blog in blogs.data" :key="blog.id">
+                    <v-col cols="auto" lg="4" sm="6" v-for="blog in blogs.data.reverse()" :key="blog.id">
                         <!-- <NuxtLink :to="'/blogs/${blog.[id]}'"> -->
                         <v-card>
                             <v-img :src="'https://admin.gathstudents.com' + blog.attributes.Image.data.attributes.url"
