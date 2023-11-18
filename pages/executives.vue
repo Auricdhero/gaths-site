@@ -12,7 +12,7 @@
             <div class="d-flex">
                 <div v-for="executive in executives.data" :key="executive.id">
 
-                    <v-card width="150" height="310" variant="flat">
+                    <v-card width="150" height="auto" variant="flat">
                         <!-- <v-container style="width: 11em;"> -->
                         <v-card color="#103778" height="150" width="150">
                             <!-- <v-img
