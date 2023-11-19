@@ -78,9 +78,18 @@
                                 <v-card-title>
                                     {{ event.attributes.Title }}
                                 </v-card-title><br>
-                                <p class="text-muted">{{ event.attributes.Date }}</p>
-                                <p class="text-muted mt-1"><v-icon>mdi-map-marker</v-icon>{{ event.attributes.Location
+                                <p class="text-muted"><v-icon>mdi-calendar-range</v-icon> {{ event.attributes.Date }}</p>
+                                <p class="text-muted mt-1"><v-icon>mdi-map-marker</v-icon> {{ event.attributes.Location
                                 }}</p>
+                                <div>
+                                    <div v-if="event.attributes.url === true">
+                                        <v-icon>mdi-laptop-account</v-icon><nuxt-link
+                                            :to="event.attributes.url"></nuxt-link>
+                                    </div>
+                                    <div v-else>
+                                        <p class="text-muted"><v-icon>mdi-web-off</v-icon> Offline</p>
+                                    </div>
+                                </div>
                             </v-container>
 
                         </v-card><br>
