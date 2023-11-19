@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       // plugins: [graphql()]
     },
   },
+  // ssr: false,
   // autoImports: {
   //   dirs: ["graphql"], // Enable auto-discovery within given folders
   // },

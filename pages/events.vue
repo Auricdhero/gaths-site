@@ -11,7 +11,7 @@
         </v-parallax>
         <v-container>
             <v-row>
-                <template v-for="event in events.data.reverse()" :key="event.id">
+                <template v-for="event in events.data" :key="event.id">
                     <v-col>
                         <v-card width="300">
 
@@ -46,9 +46,9 @@
 </template>
 <script setup>
 import aboutImgBg from '/img/about.png';
-const { data: events, refresh } = await useFetch('https://admin.gathstudents.com/api/events?populate=*');
-const route = useRoute();
-watch(route, value => {
-    refresh()
-});
+const { data: events } = await useFetch('https://admin.gathstudents.com/api/events?populate=*');
+// const route = useRoute();
+// watch(route, value => {
+//     refresh()
+// });
 </script>
