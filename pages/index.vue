@@ -96,9 +96,9 @@
 
                     </v-col>
                 </v-row>
-                <!-- <v-btn class="mx-auto d-flex" to="/events" style="width: 15em;" variant="flat" color="red-accent-2">More
+                <v-btn class="mx-auto d-flex" to="/events" style="width: 15em;" variant="flat" color="red-accent-2">More
                     Events
-                    <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn> -->
+                    <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
             </v-container><br>
         </div>
         <div style="background-color: #CEE1EA;">
