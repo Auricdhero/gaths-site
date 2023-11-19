@@ -36,5 +36,9 @@
     </div>
 </template>
 <script setup>
-const { data: events } = await useFetch('https://admin.gathstudents.com/api/events?populate=*');
+const { data: events, refresh } = await useFetch('https://admin.gathstudents.com/api/events?populate=*');
+const route = useRoute();
+watch(route, value => {
+    refresh()
+});
 </script>
