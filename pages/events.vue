@@ -4,7 +4,6 @@
             <v-row>
                 <template v-for="event in events.data.reverse()" :key="event.id">
                     <v-col>
-
                         <v-card width="300">
 
                             <v-img cover
@@ -30,10 +29,8 @@
                             </v-container>
 
                         </v-card><br>
-
                     </v-col>
                 </template>
-
             </v-row>
         </v-container>
     </div>

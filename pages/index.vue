@@ -150,7 +150,7 @@
                 }}
                 </h3><br>
                 <v-row class="mb-10 d-flex">
-                    <v-col cols="" lg="2" md="2" sm="3" v-for="rep in reps.data" :key="rep.id">
+                    <v-col cols="" lg="2" md="3" sm="3" v-for="rep in reps.data" :key="rep.id">
 
                         <v-card width="150" height="auto" variant="flat">
                             <v-card color="#103778" height="150" width="150">
