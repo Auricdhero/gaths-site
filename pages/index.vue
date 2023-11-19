@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <v-parallax :src="'https://admin.gathstudents.com' + home.data.attributes.coverImg.data.attributes.url"
-            height="700">
+            height="900">
             <div class="homeImg">
                 <div class="mx-auto ">
                     <v-container class="justify-content-center" style="width: 50%;">
@@ -87,7 +87,7 @@
 
                     </v-col>
                 </v-row>
-                <v-btn class="mx-auto d-flex" to="/events/" style="width: 15em;" variant="flat" color="red-accent-2">More
+                <v-btn class="mx-auto d-flex" to="/events" style="width: 15em;" variant="flat" color="red-accent-2">More
                     Events
                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
             </v-container><br>
@@ -137,22 +137,24 @@
         <div>
             <v-container>
                 <h6 class="text-left mt-16" style="color: #103778;">{{ home.data.attributes.executiveyear }}</h6><br>
-                <h3 class="text-left text-uppercase" style="color: #103778;">{{ home.data.attributes.executiveSectionTitle }}
+                <h3 class="text-left text-uppercase" style="color: #103778;">{{ home.data.attributes.executiveSectionTitle
+                }}
                 </h3><br>
                 <v-row class="mb-10 d-flex">
-                    <v-col cols="auto" lg="2" md="5" sm="1" v-for="rep in reps.data" :key="rep.id">
-                        <v-container style="width: 12em;">
+                    <v-col cols="" lg="2" md="2" sm="3" v-for="rep in reps.data" :key="rep.id">
+
+                        <v-card width="150" height="auto" variant="flat">
                             <v-card color="#103778" height="150" width="150">
-                                <!-- <v-img
-                                    v-if="'https://admin.gathstudents.com' + rep.attributes.ExecutivePic.data.attributes.url == true"
-                                    height="200" cover src="/img/profile.png"></v-img> -->
+
                                 <v-img height="200" round
                                     :src="'https://admin.gathstudents.com' + rep.attributes.ExecutivePic.data.attributes.url"
                                     cover style="border-radius: 50%;"></v-img>
                             </v-card><br>
                             <h5 class="text-center">{{ rep.attributes.Name }}</h5><br>
                             <h6 class="text-center">{{ rep.attributes.Position }}</h6>
-                        </v-container>
+                        </v-card>
+
+
                         <br>
                     </v-col>
 
@@ -166,7 +168,7 @@
         <div style="background: #DAEDF6;">
             <v-container>
                 <v-row class="mt-16 mb-16">
-                    <v-col cols="auto" lg="6" sm="4">
+                    <v-col cols="" lg="6" sm="">
                         <v-img height="350"
                             :src="'https://admin.gathstudents.com' + home.data.attributes.tourismFutureDes.data.attributes.url"></v-img>
                     </v-col>
@@ -188,8 +190,9 @@
         <v-container>
             <h3 class="text-left mt-5">{{ home.data.attributes.PartnerSection }}</h3>
             <v-row>
-                <v-col v-for="partner in partners.data" :key="partner.id">
-                    <v-img aspect-ratio="1" height="200" :src="'https://admin.gathstudents.com'+ partner.attributes.Logo.data.attributes.url"></v-img>
+                <v-col cols="" sm="" v-for="partner in partners.data" :key="partner.id">
+                    <v-img aspect-ratio="1" height="200"
+                        :src="'https://admin.gathstudents.com' + partner.attributes.Logo.data.attributes.url"></v-img>
                 </v-col>
             </v-row>
         </v-container>

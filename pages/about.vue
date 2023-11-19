@@ -12,15 +12,16 @@
         <div class="about">
             <v-container>
                 <v-row>
-                    <v-col cols="auto" lg="5" md="6" sm="12">
+                    <v-col cols="" lg="5" md="6" sm="12">
                         <v-container class="mt-10 mb-10">
                             <h4 class="text-justify">{{ about.data.attributes.missionTitle }}</h4>
                             <p class="text-justify">{{ about.data.attributes.missionDetail }}</p>
                             <p class="text-muted text-italize">{{ about.data.attributes.missionQuote }}</p>
                         </v-container>
                     </v-col>
-                    <v-col cols="auto" lg="6" md="6" sm="12">
-                        <v-img class="mt-10 mb-10" height="350" :src="aboutImg"></v-img>
+                    <v-col cols="" lg="" md="" sm="">
+                        <v-img class="mt-10 mb-10" aspect-ratio="1" height="350"
+                            :src="'https://admin.gathstudents.com' + about.data.attributes.missionPic.data.attributes.url"></v-img>
                     </v-col>
                 </v-row>
             </v-container>
@@ -63,9 +64,9 @@
         <div class="mission-statement">
             <v-container>
                 <v-row>
-                    <v-col cols="auto" lg="">
+                    <v-col cols="" sm="" lg="">
                         <v-img :src="'https://admin.gathstudents.com' + about.data.attributes.visionPic.data.attributes.url"
-                            class="mt-10 mb-10" height="350"></v-img>
+                            class="mt-10 mb-10" aspect-ratio="1" height="350"></v-img>
                     </v-col>
                     <v-col cols="auto" lg="">
                         <v-container class="mt-10 pt-10">
