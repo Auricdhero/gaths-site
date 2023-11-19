@@ -1,5 +1,14 @@
 <template>
     <div>
+        <v-parallax :src="aboutImgBg" height="320">
+            <div class="aboutImg">
+                <v-container>
+                    <h2 class="text-uppercase text-white text-center pt-16 mt-16 mb-16 pb-16">
+                        Events
+                    </h2>
+                </v-container>
+            </div>
+        </v-parallax>
         <v-container>
             <v-row>
                 <template v-for="event in events.data.reverse()" :key="event.id">
@@ -36,6 +45,7 @@
     </div>
 </template>
 <script setup>
+import aboutImgBg from '/img/about.png';
 const { data: events, refresh } = await useFetch('https://admin.gathstudents.com/api/events?populate=*');
 const route = useRoute();
 watch(route, value => {
