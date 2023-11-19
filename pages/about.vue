@@ -101,7 +101,7 @@ const values = ref([
     { icon: 'mdi-school', title: 'Unity', description: 'Evident in the mission to "unite students of Tourism, Hospitality, and related programs," GATHS emphasizes the strength that comes from a unified community, fostering collaboration and shared goals among students passionate about the industry.' },
     { icon: 'mdi-account-hard-hat', title: 'Excellence', description: "Derived from the commitment to drive the growth of Ghana's tourism and hospitality sector," + "GATHS places a high value on excellence, both in education and in contributing to the sustainable economic growth of the sector, showcasing a dedication to achieving and maintaining high standards." },
     { icon: 'mdi-campfire', title: 'Sustainability', description: "Rooted in the vision to" + '"promote sustainable tourism and hospitality practices," GATHS demonstrates a commitment to responsible and eco-friendly approaches, recognizing the importance of preserving the environment and contributing positively to local communities and the global tourism landscape.' },
-    { icon: 'mdi-head-light-bulb', title: 'Innovation', description: 'Inherent in the aim to "bridge the academia-industry gap," GATHS values innovation, showcasing an openness to new ideas and approaches. The association embraces a dynamic, forward-thinking mindset to enhance the learning and professional experiences of its members.' }
+    { icon: 'mdi-head-lightbulb', title: 'Innovation', description: 'Inherent in the aim to "bridge the academia-industry gap," GATHS values innovation, showcasing an openness to new ideas and approaches. The association embraces a dynamic, forward-thinking mindset to enhance the learning and professional experiences of its members.' }
 ]);
 
 
