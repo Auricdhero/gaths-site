@@ -82,9 +82,10 @@
                 <v-divider></v-divider>
 
                 <div>
-                    <v-btn v-for="sm in sms" :key="sm" :icon="sm.icons" :to="sms.src" class="mx-4" variant="text"><v-icon >{{ sm.icons }}</v-icon></v-btn>
+                    <v-btn v-for="sm in sms" :key="sm" :icon="sm.icons" :href="sms.src" class="mx-4"
+                        variant="text"><v-icon>{{ sm.icons }}</v-icon></v-btn>
                 </div>
-            </v-container>
+            </v-container>  
         </v-footer>
     </div>
 </template>
@@ -100,9 +101,10 @@ const sms = ref([
 <style>
 ul {
     list-style-type: none;
-    
+
 }
-.link{
+
+.link {
     text-decoration: none;
     color: white;
 }

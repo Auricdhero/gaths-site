@@ -19,7 +19,7 @@
                                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                             </v-col>
                             <v-col class="mx-auto" cols="auto" lg="5" md="6" sm="6">
-                                <v-btn variant="outlined" to="" color="white">Become a Member
+                                <v-btn variant="outlined" href="https://forms.gle/tjAHEfCEQbUDmqXH8" color="white">Become a Member
                                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                             </v-col>
                         </v-row>
