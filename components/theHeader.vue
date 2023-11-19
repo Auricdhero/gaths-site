@@ -24,6 +24,11 @@
                                 </NuxtLink>
                             </li>
                             <li class="nav-item">
+                                <NuxtLink class="nav-link text-white" to="/events">
+                                    Events
+                                </NuxtLink>
+                            </li>
+                            <li class="nav-item">
                                 <NuxtLink class="nav-link text-white" to="/blogs/">
                                     Blog
                                 </NuxtLink>
