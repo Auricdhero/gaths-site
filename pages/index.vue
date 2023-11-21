@@ -19,7 +19,8 @@
                                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                             </v-col>
                             <v-col class="mx-auto" cols="auto" lg="5" md="6" sm="6">
-                                <v-btn variant="outlined" href="https://forms.gle/tjAHEfCEQbUDmqXH8" color="white">Become a Member
+                                <v-btn variant="outlined" href="https://forms.gle/tjAHEfCEQbUDmqXH8" color="white">Become a
+                                    Member
                                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
                             </v-col>
                         </v-row>
@@ -129,7 +130,9 @@
                         <!-- {{ testimony }} -->
                         <v-card width="400" color="#F8F7F7" elevation="0">
 
-                            <v-img class="mt-4" src="/img/profile.png" height="200"></v-img><br>
+                            <v-img class="mt-4"
+                                :src="'https://admin.gathstudents.com' + testimony"
+                                height="200"></v-img><br>
 
                             <h5 class="text-center">{{ testimony.attributes.Name }}</h5><br>
                             <h6 class="text-center">{{ testimony.attributes.Institution }}</h6><br>
@@ -212,7 +215,7 @@
 
 const homeContent = await useFetch('https://admin.gathstudents.com/api/home-page?populate=*');
 const home = homeContent.data.value;
-console.log(homeContent)
+// console.log(homeContent)
 const { data: uniLogos } = await useFetch('https://admin.gathstudents.com/api/uni-logos?populate=*')
 
 const link = 'Tourism Impact Report (2022).';
@@ -223,10 +226,10 @@ const memDes = '5+ thousand tourism students have already joined the  university
 
 const { data: reps } = await useFetch('https://admin.gathstudents.com/api/executives?populate=*')
 const { data: testimonies } = await useFetch('https://admin.gathstudents.com/api/testimonies?populate=*');
-
+// console.log(testimonies.attributes)
 const { data: events } = await useFetch('https://admin.gathstudents.com/api/events?populate=*');
 const { data: partners } = await useFetch('https://admin.gathstudents.com/api/partners?populate=*');
-console.log(partners)
+// console.log(partners)
 
 </script>
 <style>

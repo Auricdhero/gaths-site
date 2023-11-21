@@ -10,26 +10,32 @@
         <v-container>
 
             <div class="d-flex">
-                <div v-for="executive in executives.data" :key="executive.id">
+                <v-row>
+                    <v-col v-for="executive in executives.data" :key="executive.id">
+                        <div>
 
-                    <v-card width="150" height="auto" variant="flat">
-                        <!-- <v-container style="width: 11em;"> -->
-                        <v-card color="#103778" height="150" width="150">
-                            <!-- <v-img
+                            <v-card width="150" height="auto" variant="flat">
+                                <!-- <v-container style="width: 11em;"> -->
+                                <v-card color="#103778" height="150" width="150">
+                                    <!-- <v-img
                                     v-if="'https://admin.gathstudents.com' + rep.attributes.ExecutivePic.data.attributes.url == true"
                                     height="200" cover src="/img/profile.png"></v-img> -->
-                            <v-img height="200" round
-                                :src="'https://admin.gathstudents.com' + executive.attributes.Picture.data.attributes.url"
-                                cover style="border-radius: 50%;"></v-img>
+                                    <v-img height="200" round
+                                        :src="'https://admin.gathstudents.com' + executive.attributes.Picture.data.attributes.url"
+                                        cover style="border-radius: 50%;"></v-img>
 
-                        </v-card><br>
-                        <h5 class="text-center">{{ executive.attributes.Name }}</h5><br>
-                        <h6 class="text-center">{{ executive.attributes.Title }}</h6><br>
-                        <h6 class="text-center">{{ executive.attributes.institution }}</h6>
-                        <!-- <h6 class="text-start">{{  }}</h6> -->
-                        <!-- </v-container> -->
-                    </v-card>
-                </div>
+                                </v-card><br>
+                                <h5 class="text-center">{{ executive.attributes.Name }}</h5><br>
+                                <h6 class="text-center">{{ executive.attributes.Title }}</h6><br>
+                                <h6 class="text-center">{{ executive.attributes.institution }}</h6>
+                                <!-- <h6 class="text-start">{{  }}</h6> -->
+                                <!-- </v-container> -->
+                            </v-card>
+                        </div>
+                    </v-col>
+                    
+                </v-row>
+                
 
             </div>
 
