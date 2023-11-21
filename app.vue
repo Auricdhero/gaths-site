@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Title>GATHS</Title>
+    <Title>GHANA ASSOCIATION OF TOURISM AND HOSPITALITY STUDENTS</Title>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
