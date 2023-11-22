@@ -40,7 +40,8 @@ export default defineNuxtConfig({
   ],
   modules: [
     // '@nuxtjs/apollo',
-    '@nuxtjs/strapi'
+    '@nuxtjs/strapi',
+    // 'vue-social-sharing/nuxt'
   ],
   strapi: {
     url: process.env.API_URL,
@@ -49,7 +50,7 @@ export default defineNuxtConfig({
     cookie: {},
     cookieName: 'strapi_jwt'
   },
-
+  // modules:{},
 
   runtimeConfig: {
     public: {

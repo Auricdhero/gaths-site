@@ -13,6 +13,7 @@
         </v-parallax>
         <v-container>
             <Markdown :source="blog.data.attributes.Detail" />
+            <p class="text-muted">Date Created: {{ useDateFormat(blog.data.attributes.publishedAt, 'MMMM D, YYYY') }}</p>
         </v-container>
         <!-- {{ route.blog.Title }} -->
         <!-- <h4>{{ route }}</h4> -->
@@ -22,7 +23,8 @@
 </template>
 <script setup>
 import Markdown from 'vue3-markdown-it'
+import { useDateFormat } from '@vueuse/core'
 const route = useRoute();
-const { data: blog } = await useFetch('https://admin.gathstudents.com/api/blogs/' + route.params.id+'?populate=*');
+const { data: blog } = await useFetch('https://admin.gathstudents.com/api/blogs/' + route.params.id + '?populate=*');
 
 </script>

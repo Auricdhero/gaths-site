@@ -26,6 +26,26 @@
                             </v-card-item>
                             <v-btn :to="'/blogs/' + blog.id" class="mx-4 mb-10" variant="outlined">Read More
                                 <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
+
+                            <!-- <v-divider></v-divider> -->
+                            <!-- <v-row>
+
+                                <v-col cols="3">
+                                    <client-only> -->
+                            <div v-if="isSupported">
+                                <v-btn size="medium" variant="flat" @click="copy(blogLink + blog.id)" class="mt-n10 ml-16"
+                                    icon="mdi-content-copy"></v-btn>
+                            </div>
+                            
+                            <!-- </ShareNetwork> -->
+                            <!-- </client-only>
+
+                                </v-col>
+                            </v-row> -->
+
+
+                            <!-- <v-spacer></v-spacer> -->
+
                         </v-card>
                         <!-- </NuxtLink> -->
                     </v-col>
@@ -36,7 +56,7 @@
 </template>
 <script setup>
 // import useStrapiData from '~/composables/strapi';
-
+import { useClipboard } from '@vueuse/core'
 const config = useRuntimeConfig();
 import blogPic from '/img/another.png';
 const route = useRoute();
@@ -44,7 +64,10 @@ const route = useRoute();
 const { data: blogs } = await useFetch('https://admin.gathstudents.com/api/blogs?populate=*');
 // const { data: blog } = await useFetch('https://admin.gathstudents.com/api/blogs/?populate=*')
 
-console.log(blogs)
+// console.log(blogs)
+
+const blogLink = ref('https://gathstudents.com/');
+const { text, copy, copied, isSupported } = useClipboard({ blogLink });
 
 </script>
 <style>
