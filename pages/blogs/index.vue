@@ -24,19 +24,26 @@
                                 <v-divider></v-divider>
                                 <p class="text-justify">{{ blog.attributes.Description }}</p>
                             </v-card-item>
-                            <v-btn :to="'/blogs/' + blog.id" class="mx-4 mb-10" variant="outlined">Read More
-                                <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
+                            <div class="ml-16 pl-16 " v-if="isSupported">
+                                <v-btn size="medium" variant="flat" @click="copy(blogLink + blog.id)" class="mt-n10 ml-16">
+                                    <span v-if='!copied'><v-icon>mdi-content-copy</v-icon></span>
+                                    <span v-else>Copied!</span>
+                                </v-btn>
+                            </div>
+
 
                             <!-- <v-divider></v-divider> -->
                             <!-- <v-row>
 
                                 <v-col cols="3">
                                     <client-only> -->
-                            <div v-if="isSupported">
-                                <v-btn size="medium" variant="flat" @click="copy(blogLink + blog.id)" class="mt-n10 ml-16"
-                                    icon="mdi-content-copy"></v-btn>
+                            <div class="mt-n11">
+                                <v-btn :to="'/blogs/' + blog.id" class="mx-4 mb-10" variant="outlined">Read More
+                                    <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
+
                             </div>
-                            
+
+
                             <!-- </ShareNetwork> -->
                             <!-- </client-only>
 
@@ -66,7 +73,7 @@ const { data: blogs } = await useFetch('https://admin.gathstudents.com/api/blogs
 
 // console.log(blogs)
 
-const blogLink = ref('https://gathstudents.com/');
+const blogLink = ref('https://gathstudents.com/blogs/');
 const { text, copy, copied, isSupported } = useClipboard({ blogLink });
 
 </script>
