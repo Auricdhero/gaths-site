@@ -70,34 +70,35 @@
                 <v-row>
                     <v-col v-for="event in events.data.slice(0, 3).reverse()" :key="event.id">
                         <v-card width="300">
+                            <nuxt-link style="text-decoration: none;" :to="'/events/' + event.id">
+                                <v-img cover
+                                    :src="'https://admin.gathstudents.com' + event.attributes.flyer.data.attributes.url"
+                                    height="150"></v-img><br>
+                                <v-container>
 
-                            <v-img cover
-                                :src="'https://admin.gathstudents.com' + event.attributes.flyer.data.attributes.url"
-                                height="150"></v-img><br>
-                            <v-container>
-
-                                <v-card-title>
-                                    {{ event.attributes.Title }}
-                                </v-card-title><br>
-                                <p class="text-muted"><v-icon>mdi-calendar-range</v-icon> {{ event.attributes.Date }}</p>
-                                <p class="text-muted mt-1"><v-icon>mdi-map-marker</v-icon> {{ event.attributes.Location
-                                }}</p>
-                                <div>
-                                    <div v-if="event.attributes.url === true">
-                                        <v-icon>mdi-laptop-account</v-icon><nuxt-link
-                                            :to="event.attributes.url"></nuxt-link>
+                                    <v-card-title>
+                                        {{ event.attributes.Title }}
+                                    </v-card-title><br>
+                                    <p class="text-muted"><v-icon>mdi-calendar-range</v-icon> {{ event.attributes.Date }}
+                                    </p>
+                                    <p class="text-muted mt-1"><v-icon>mdi-map-marker</v-icon> {{ event.attributes.Location
+                                    }}</p>
+                                    <div>
+                                        <div v-if="event.attributes.url === true">
+                                            <v-icon>mdi-laptop-account</v-icon><nuxt-link
+                                                :to="event.attributes.url"></nuxt-link>
+                                        </div>
+                                        <div v-else>
+                                            <p class="text-muted"><v-icon>mdi-web-off</v-icon> Offline</p>
+                                        </div>
                                     </div>
-                                    <div v-else>
-                                        <p class="text-muted"><v-icon>mdi-web-off</v-icon> Offline</p>
-                                    </div>
-                                </div>
-                            </v-container>
-
+                                </v-container>
+                            </nuxt-link>
                         </v-card><br>
 
                     </v-col>
                 </v-row>
-                <v-btn class="mx-auto d-flex" to="/events" style="width: 15em;" variant="flat" color="red-accent-2">More
+                <v-btn class="mx-auto d-flex" to="/events/" style="width: 15em;" variant="flat" color="red-accent-2">More
                     Events
                     <v-icon>mdi-arrow-right-thin-circle-outline</v-icon></v-btn>
             </v-container><br>
@@ -130,8 +131,7 @@
                         <!-- {{ testimony }} -->
                         <v-card width="400" color="#F8F7F7" elevation="0">
 
-                            <v-img class="mt-4"
-                                :src="'https://admin.gathstudents.com' + testimony"
+                            <v-img class="mt-4" :src="'https://admin.gathstudents.com' + testimony"
                                 height="200"></v-img><br>
 
                             <h5 class="text-center">{{ testimony.attributes.Name }}</h5><br>
